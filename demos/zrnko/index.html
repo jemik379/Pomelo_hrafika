@@ -1,0 +1,480 @@
+<!DOCTYPE html>
+<html lang="cs">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>ZRNKO — pražírna výběrové kávy</title>
+  <meta name="description" content="Výběrová káva pražená v malých dávkách v Praze. Čerstvá zrna z farem, které známe jménem. Doprava zdarma nad 1 000 Kč.">
+  <meta name="theme-color" content="#f2ece1">
+  <meta property="og:title" content="ZRNKO — pražírna výběrové kávy">
+  <meta property="og:description" content="Každý šálek má svůj původ. Čerstvě pražená káva z farem, které známe jménem.">
+  <meta property="og:type" content="website">
+  <meta name="robots" content="noindex, nofollow">
+  <link rel="icon" href="assets/favicon.svg" type="image/svg+xml">
+  <link rel="preload" href="/assets/fonts/fraunces-latin.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="preload" href="/assets/fonts/fraunces-italic-latin.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="preload" href="/assets/fonts/manrope-latin.woff2" as="font" type="font/woff2" crossorigin>
+  <script src="js/boot.js?v=20261107a"></script>
+  <link rel="stylesheet" href="css/main.css?v=20261107a">
+  <link rel="stylesheet" href="css/sections.css?v=20261107a">
+  <link rel="stylesheet" href="css/overlays.css?v=20261107a">
+</head>
+<body>
+  <a class="skip-link" href="#main">Přeskočit na obsah</a>
+  <div class="grain" aria-hidden="true"></div>
+
+  <svg class="sprite" aria-hidden="true">
+    <symbol id="i-search" viewBox="0 0 24 24"><circle cx="11" cy="11" r="7"/><path d="m16.5 16.5 4.5 4.5"/></symbol>
+    <symbol id="i-bag" viewBox="0 0 24 24"><path d="M5.5 8h13l1 12.5h-15L5.5 8Z"/><path d="M9 8V6.5a3 3 0 0 1 6 0V8"/></symbol>
+    <symbol id="i-user" viewBox="0 0 24 24"><circle cx="12" cy="8" r="3.5"/><path d="M5 20c0-3.5 3.1-5.5 7-5.5s7 2 7 5.5"/></symbol>
+    <symbol id="i-menu" viewBox="0 0 24 24"><path d="M4 7h16M4 12h16M4 17h16"/></symbol>
+    <symbol id="i-close" viewBox="0 0 24 24"><path d="m6 6 12 12M18 6 6 18"/></symbol>
+    <symbol id="i-arrow" viewBox="0 0 24 24"><path d="M4 12h16M14 6l6 6-6 6"/></symbol>
+    <symbol id="i-arrow-up" viewBox="0 0 24 24"><path d="M7 17 17 7M8 7h9v9"/></symbol>
+    <symbol id="i-plus" viewBox="0 0 24 24"><path d="M12 5v14M5 12h14"/></symbol>
+    <symbol id="i-minus" viewBox="0 0 24 24"><path d="M5 12h14"/></symbol>
+    <symbol id="i-heart" viewBox="0 0 24 24"><path d="M12 20s-7-4.3-7-9a4 4 0 0 1 7-2.6A4 4 0 0 1 19 11c0 4.7-7 9-7 9Z"/></symbol>
+    <symbol id="i-check" viewBox="0 0 24 24"><path d="m5 12.5 4.5 4.5L19 7"/></symbol>
+    <symbol id="i-trash" viewBox="0 0 24 24"><path d="M4 7h16M9 7V5h6v2M7 7l1 13h8l1-13M10 11v5M14 11v5"/></symbol>
+    <symbol id="i-truck" viewBox="0 0 24 24"><path d="M3 6h11v11H3zM14 10h4l3 3v4h-7z"/><circle cx="7" cy="18" r="1.8"/><circle cx="17.5" cy="18" r="1.8"/></symbol>
+    <symbol id="i-leaf" viewBox="0 0 24 24"><path d="M20 4c-8 0-14 3.5-14 10a5 5 0 0 0 5 5c6.5 0 9-6 9-15Z"/><path d="M5 21c2-6 6-9 11-11"/></symbol>
+    <symbol id="i-gift" viewBox="0 0 24 24"><path d="M4 9h16v4H4zM6 13v8h12v-8M12 9v12"/><path d="M12 9C9 9 6.5 8 6.5 5.8 6.5 4.2 8 3.5 9.2 4c1.6.7 2.8 5 2.8 5ZM12 9c3 0 5.5-1 5.5-3.2 0-1.6-1.5-2.3-2.7-1.8C13.2 4.7 12 9 12 9Z"/></symbol>
+    <symbol id="i-bean" viewBox="0 0 24 24"><ellipse cx="12" cy="12" rx="7.2" ry="9.2" transform="rotate(35 12 12)"/><path d="M8.5 16.5c2.5-1.2 3.2-3.2 2.2-5.3-1-2.1-.3-3.9 1.8-5.2"/></symbol>
+    <symbol id="i-lock" viewBox="0 0 24 24"><rect x="5" y="10" width="14" height="10" rx="2"/><path d="M8 10V7a4 4 0 0 1 8 0v3"/></symbol>
+    <symbol id="i-mail" viewBox="0 0 24 24"><rect x="3" y="5" width="18" height="14" rx="2"/><path d="m4 7 8 6 8-6"/></symbol>
+  </svg>
+
+  <div class="announcement">
+    <div class="container announcement__inner">
+      <span>Doprava zdarma nad 1 000 Kč</span>
+      <span class="announcement__dot" aria-hidden="true"></span>
+      <span class="announcement__hide">Čerstvě pražíme každý čtvrtek</span>
+      <span class="announcement__dot announcement__hide" aria-hidden="true"></span>
+      <a href="#obchod">Nový přírůstek: Keňa Nyeri <span aria-hidden="true">→</span></a>
+    </div>
+  </div>
+
+  <header class="site-header" id="siteHeader">
+    <div class="container header__inner">
+      <a class="brand" href="#top" aria-label="ZRNKO — domů">
+        <svg class="brand__mark icon" aria-hidden="true"><use href="#i-bean"/></svg>
+        <span>zrnko</span><span class="brand__dot">.</span>
+      </a>
+
+      <nav class="nav" aria-label="Hlavní navigace">
+        <a href="#obchod" data-spy="obchod">Obchod</a>
+        <a href="#pribeh" data-spy="pribeh">Náš příběh</a>
+        <a href="#predplatne" data-spy="predplatne">Předplatné</a>
+        <a href="#hodnoceni" data-spy="hodnoceni">Recenze</a>
+      </nav>
+
+      <div class="header__actions">
+        <button class="icon-btn header__search" type="button" data-open-search aria-label="Hledat kávu">
+          <svg class="icon" aria-hidden="true"><use href="#i-search"/></svg>
+        </button>
+        <button class="icon-btn header__account" type="button" data-demo-account aria-label="Můj účet (ukázka)">
+          <svg class="icon" aria-hidden="true"><use href="#i-user"/></svg>
+        </button>
+        <button class="cart-btn" type="button" data-open-cart aria-label="Otevřít košík">
+          <svg class="icon" aria-hidden="true"><use href="#i-bag"/></svg>
+          <span class="cart-btn__label">Košík</span>
+          <span class="cart-count" data-cart-count>0</span>
+        </button>
+        <button class="icon-btn menu-toggle" type="button" data-open-menu aria-label="Otevřít menu">
+          <svg class="icon" aria-hidden="true"><use href="#i-menu"/></svg>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <main id="main">
+    <section class="hero" id="top">
+      <div class="container hero__grid">
+        <div class="hero__content">
+          <p class="eyebrow">Pražírna výběrové kávy · Praha 7</p>
+          <h1>Každý šálek má svůj <em>původ.</em></h1>
+          <p class="hero__lead">Pražíme v malých dávkách kávy z farem, které známe jménem. Žádné sklady, žádné kompromisy — jen čerstvá zrna, která do vašeho šálku dorazí do 48 hodin od pražení.</p>
+          <div class="hero__actions">
+            <a class="btn btn--primary" href="#obchod">
+              Prozkoumat kávu
+              <span class="btn__icon"><svg class="icon" aria-hidden="true"><use href="#i-arrow"/></svg></span>
+            </a>
+            <a class="link-arrow" href="#pribeh">Náš příběh <svg class="icon" aria-hidden="true"><use href="#i-arrow-up"/></svg></a>
+          </div>
+          <div class="hero__proof">
+            <div class="avatars" aria-hidden="true">
+              <span class="avatar" style="--av:#365a41">MK</span>
+              <span class="avatar" style="--av:#b4482b">JT</span>
+              <span class="avatar" style="--av:#20364a">AL</span>
+              <span class="avatar avatar--more">+1k</span>
+            </div>
+            <div class="proof__text">
+              <span class="stars" aria-label="Hodnocení 4,9 z 5">★★★★★</span>
+              <strong>4,9 / 5</strong> od 1 240 spokojených pijáků kávy
+            </div>
+          </div>
+        </div>
+
+        <div class="hero__visual">
+          <div class="hero__shape" aria-hidden="true"></div>
+          <div class="hero__photo">
+            <img src="assets/hero-cup.webp" alt="Sklenice čerstvě uvařené kávy v měkkém ranním světle" width="1200" height="1200" fetchpriority="high" decoding="async">
+            <span class="photo-tag">Etiopie Guji · nová sezona</span>
+          </div>
+          <div class="hero__stamp" aria-hidden="true">
+            <svg class="ring" viewBox="0 0 130 130">
+              <defs><path id="stampPath" d="M65,65 m-46,0 a46,46 0 1,1 92,0 a46,46 0 1,1 -92,0"/></defs>
+              <text><textPath href="#stampPath">Čerstvě praženo · každý čtvrtek ·</textPath></text>
+            </svg>
+            <svg class="icon"><use href="#i-bean"/></svg>
+          </div>
+          <div class="hero__mini" id="heroMini"></div>
+        </div>
+      </div>
+    </section>
+
+    <div class="marquee" aria-hidden="true">
+      <div class="marquee__track">
+        <div class="marquee__group">
+          <span>Výběrová káva</span><b>✳</b><span>Čerstvě praženo každý čtvrtek</span><b>✳</b><span>Doprava zdarma nad 1 000 Kč</span><b>✳</b><span>Fair trade &amp; přímý obchod</span><b>✳</b><span>Pražírna v Praze 7</span><b>✳</b>
+        </div>
+        <div class="marquee__group">
+          <span>Výběrová káva</span><b>✳</b><span>Čerstvě praženo každý čtvrtek</span><b>✳</b><span>Doprava zdarma nad 1 000 Kč</span><b>✳</b><span>Fair trade &amp; přímý obchod</span><b>✳</b><span>Pražírna v Praze 7</span><b>✳</b>
+        </div>
+      </div>
+    </div>
+
+    <section class="products section" id="obchod">
+      <div class="container">
+        <div class="section-head">
+          <div class="section-head__copy">
+            <p class="eyebrow">Náš výběr</p>
+            <h2>Kávy, které stojí za <em>probuzení.</em></h2>
+            <p>Každá káva má svůj původ, charakter a příběh. Vyberte si podle chuti — my se postaráme o zbytek.</p>
+          </div>
+          <div class="section-head__aside">
+            <p class="section-note"><svg class="icon" aria-hidden="true"><use href="#i-truck"/></svg> Odesíláme do 24 hodin</p>
+          </div>
+        </div>
+
+        <div class="shop-bar">
+          <div class="filters" role="group" aria-label="Filtrovat kávy">
+            <button class="filter is-active" type="button" data-filter="all" aria-pressed="true">Vše</button>
+            <button class="filter" type="button" data-filter="espresso" aria-pressed="false">Espresso</button>
+            <button class="filter" type="button" data-filter="filtr" aria-pressed="false">Filtr</button>
+            <button class="filter" type="button" data-filter="dekaf" aria-pressed="false">Dekaf</button>
+            <button class="filter" type="button" data-filter="darky" aria-pressed="false">Dárky</button>
+          </div>
+          <p class="results-count" id="resultsCount" aria-live="polite">8 káv</p>
+        </div>
+
+        <div class="product-grid" id="productGrid"></div>
+
+        <div class="shop-footer">
+          <p><svg class="icon" aria-hidden="true"><use href="#i-leaf"/></svg> Všechny kávy pražíme v malých dávkách. Obaly jsou kompostovatelné.</p>
+          <button class="link-arrow" type="button" data-open-search>Nevíte si rady? Poradíme <svg class="icon" aria-hidden="true"><use href="#i-arrow"/></svg></button>
+        </div>
+      </div>
+    </section>
+
+    <section class="features" aria-label="Proč ZRNKO">
+      <div class="container features__grid">
+        <div class="feature">
+          <span class="feature__icon"><svg class="icon" aria-hidden="true"><use href="#i-bean"/></svg></span>
+          <div><h3>Čerstvě pražené</h3><p>Každý čtvrtek v malých dávkách. Nikdy ne skladem.</p></div>
+        </div>
+        <div class="feature">
+          <span class="feature__icon"><svg class="icon" aria-hidden="true"><use href="#i-leaf"/></svg></span>
+          <div><h3>Přímo od farmářů</h3><p>Platíme férově a známe každý původ.</p></div>
+        </div>
+        <div class="feature">
+          <span class="feature__icon"><svg class="icon" aria-hidden="true"><use href="#i-truck"/></svg></span>
+          <div><h3>Doprava do 48 h</h3><p>Odesíláme do druhého dne. Zdarma nad 1 000 Kč.</p></div>
+        </div>
+        <div class="feature">
+          <span class="feature__icon"><svg class="icon" aria-hidden="true"><use href="#i-gift"/></svg></span>
+          <div><h3>Předplatné bez závazků</h3><p>Káva přesně podle vašeho rytmu. Kdykoli pauza.</p></div>
+        </div>
+      </div>
+    </section>
+
+    <section class="story section" id="pribeh">
+      <div class="container story__grid">
+        <div class="story__visual reveal">
+          <div class="story__main">
+            <img src="assets/story-pour.webp" alt="Barista připravuje kávu metodou pour over" width="1400" height="933" loading="lazy" decoding="async">
+          </div>
+          <div class="story__secondary">
+            <img src="assets/story-people.webp" alt="Přátelé si připíjejí šálky kávy" width="800" height="533" loading="lazy" decoding="async">
+          </div>
+          <div class="story__stat">
+            <span class="story__stat-num">48 h</span>
+            <span class="story__stat-label">od pražení<br>k vám domů</span>
+          </div>
+        </div>
+        <div class="story__content reveal" style="--d:120ms">
+          <p class="eyebrow">Náš příběh</p>
+          <h2>Z farmy do šálku.<br><em>Bez zkratek.</em></h2>
+          <p>ZRNKO začalo v roce 2018 na kuchyňské lince v Praze 7 — s jedním domácím pražičem a velkou posedlostí dobrou kávou. Dnes spolupracujeme s farmáři ve dvanácti zemích a každé zrno pražíme s respektem k práci, která za ním stojí.</p>
+          <ul class="story__list">
+            <li><svg class="icon" aria-hidden="true"><use href="#i-check"/></svg> Přímý obchod s farmáři, bez prostředníků</li>
+            <li><svg class="icon" aria-hidden="true"><use href="#i-check"/></svg> Pražení v malých dávkách každý čtvrtek</li>
+            <li><svg class="icon" aria-hidden="true"><use href="#i-check"/></svg> Kompostovatelné obaly a uhlíkově neutrální doprava</li>
+          </ul>
+          <div class="story__signature">
+            <span class="signature__avatar">MJ</span>
+            <div><strong>Marek &amp; Jana</strong><span>zakladatelé pražírny ZRNKO</span></div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="subscription section" id="predplatne">
+      <div class="container">
+        <div class="subscription__card reveal">
+          <div class="subscription__bg" aria-hidden="true"><img src="assets/beans.webp" alt="" width="1000" height="763" loading="lazy" decoding="async"></div>
+          <div class="subscription__grid">
+            <div>
+              <p class="eyebrow">Předplatné</p>
+              <h2>Vaše oblíbená káva.<br><em>Přesně na čas.</em></h2>
+              <p>Nechte si čerstvě praženou kávu doručovat v rytmu, který vám sedne. Bez závazků, s možností kdykoli pozastavit nebo změnit kávu. První zásilka navíc se slevou 20 %.</p>
+              <div class="sub__steps">
+                <span class="sub__step"><b>01</b> Vyberete kávu</span>
+                <span class="sub__step"><b>02</b> Zvolíte rytmus</span>
+                <span class="sub__step"><b>03</b> Pražíme čerstvě</span>
+              </div>
+            </div>
+            <div class="plan">
+              <p class="plan__label">Zvolte si rytmus</p>
+              <div class="plan__options" role="radiogroup" aria-label="Rytmus předplatného">
+                <button class="plan-option" type="button" role="radio" aria-checked="false" data-plan="weekly" data-price="329" data-label="Každý týden">
+                  <span class="plan-option__left"><span class="plan-option__radio"></span><span class="plan-option__name">Každý týden <span class="plan-option__save">−20 %</span></span></span>
+                  <span class="plan-option__price">329 Kč</span>
+                </button>
+                <button class="plan-option is-active" type="button" role="radio" aria-checked="true" data-plan="biweekly" data-price="349" data-label="Každé 2 týdny">
+                  <span class="plan-option__left"><span class="plan-option__radio"></span><span class="plan-option__name">Každé 2 týdny <span class="plan-option__save">−15 %</span></span></span>
+                  <span class="plan-option__price">349 Kč</span>
+                </button>
+                <button class="plan-option" type="button" role="radio" aria-checked="false" data-plan="monthly" data-price="379" data-label="Jednou měsíčně">
+                  <span class="plan-option__left"><span class="plan-option__radio"></span><span class="plan-option__name">Jednou měsíčně <span class="plan-option__save">−10 %</span></span></span>
+                  <span class="plan-option__price">379 Kč</span>
+                </button>
+              </div>
+              <div class="plan__total">
+                <span class="plan__total-label">Vaše cena za 250 g</span>
+                <span class="plan__price" id="planPrice">349 <small>Kč</small></span>
+              </div>
+              <button class="btn btn--light" type="button" id="addSubscription">
+                Přidat předplatné do košíku
+                <span class="btn__icon"><svg class="icon" aria-hidden="true"><use href="#i-arrow"/></svg></span>
+              </button>
+              <p class="plan__note"><svg class="icon" aria-hidden="true"><use href="#i-lock"/></svg> Bez závazků · kdykoli pozastavíte</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="testimonials section" id="hodnoceni">
+      <div class="container">
+        <div class="testimonials__head">
+          <p class="eyebrow eyebrow--center">Recenze</p>
+          <h2>Milujeme vaše <em>ranní rituály.</em></h2>
+          <p>Přes 1 200 hodnocení a 4,9 hvězdičky. Tohle o nás říkají lidé, kteří už si bez nás ráno neumí představit.</p>
+        </div>
+        <div class="testimonials__grid">
+          <article class="testimonial reveal">
+            <div class="testimonial__stars" aria-label="5 z 5 hvězd">★★★★★</div>
+            <blockquote>„Etiopie Guji mi změnila pohled na filtr. Květinová, šťavnatá a přitom krásně čistá. Objednávám už potřetí a pokaždé dorazí čerstvá.“</blockquote>
+            <div class="testimonial__author">
+              <span class="avatar avatar--sm" style="--av:#365a41" aria-hidden="true">TN</span>
+              <div><strong>Tereza Nováková</strong><span>Praha · ověřený nákup</span></div>
+            </div>
+          </article>
+          <article class="testimonial reveal" style="--d:100ms">
+            <div class="testimonial__stars" aria-label="5 z 5 hvězd">★★★★★</div>
+            <blockquote>„Konečně pražírna, která má konzistentní kvalitu. House Blend je naše každodenní jistota a předplatné funguje jako hodinky.“</blockquote>
+            <div class="testimonial__author">
+              <span class="avatar avatar--sm" style="--av:#b4482b" aria-hidden="true">JM</span>
+              <div><strong>Jakub Marek</strong><span>Brno · ověřený nákup</span></div>
+            </div>
+          </article>
+          <article class="testimonial reveal" style="--d:200ms">
+            <div class="testimonial__stars" aria-label="5 z 5 hvězd">★★★★★</div>
+            <blockquote>„Dárková sada byla nejlepší vánoční dárek. Krásné balení, osobní kartička a káva, po které se zapráší i u tchána.“</blockquote>
+            <div class="testimonial__author">
+              <span class="avatar avatar--sm" style="--av:#20364a" aria-hidden="true">LD</span>
+              <div><strong>Lucie Dvořáková</strong><span>Olomouc · ověřený nákup</span></div>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="newsletter section" id="newsletter">
+      <div class="container">
+        <div class="newsletter__card reveal">
+          <div class="newsletter__copy">
+            <p class="eyebrow">Newsletter</p>
+            <h2>První šálek je <em>na nás.</em></h2>
+            <p>Přihlaste se k odběru novinek a dostanete slevu 10 % na první nákup. Žádný spam, jen nové kávy a příběhy z pražírny.</p>
+          </div>
+          <div class="newsletter__form-wrap" id="newsletterWrap">
+            <form class="newsletter__form" id="newsletterForm" novalidate>
+              <label class="sr-only" for="newsletterEmail">Váš e-mail</label>
+              <input type="email" id="newsletterEmail" name="email" placeholder="váš@email.cz" autocomplete="email" required>
+              <button class="btn" type="submit">Chci slevu 10 %</button>
+            </form>
+            <p class="form-note">Odběr můžete kdykoli zrušit. Slibujeme, že vás nebudeme zahlcovat.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <div class="container">
+      <div class="footer__top">
+        <div>
+          <a class="brand" href="#top" aria-label="ZRNKO — domů">
+            <svg class="brand__mark icon" aria-hidden="true"><use href="#i-bean"/></svg>
+            <span>zrnko</span><span class="brand__dot">.</span>
+          </a>
+          <p class="footer__intro">Výběrová káva pražená v malých dávkách v Praze 7. Od roku 2018 s respektem k farmářům i k vašemu ránu.</p>
+          <div class="footer__social">
+            <a href="#newsletter" aria-label="Instagram">Instagram <span aria-hidden="true">↗</span></a>
+            <a href="#newsletter" aria-label="Facebook">Facebook <span aria-hidden="true">↗</span></a>
+            <a href="#newsletter" aria-label="TikTok">TikTok <span aria-hidden="true">↗</span></a>
+          </div>
+        </div>
+        <div>
+          <h3>Obchod</h3>
+          <ul>
+            <li><a href="#obchod">Všechny kávy</a></li>
+            <li><a href="#obchod">Espresso</a></li>
+            <li><a href="#obchod">Filtr</a></li>
+            <li><a href="#obchod">Dárky</a></li>
+            <li><a href="#predplatne">Předplatné</a></li>
+          </ul>
+        </div>
+        <div>
+          <h3>Firma</h3>
+          <ul>
+            <li><a href="#pribeh">Náš příběh</a></li>
+            <li><a href="#pribeh">Pražírna</a></li>
+            <li><a href="#pribeh">Farmáři</a></li>
+            <li><a href="#newsletter">Blog</a></li>
+            <li><a href="#newsletter">Kariéra</a></li>
+          </ul>
+        </div>
+        <div>
+          <h3>Pomoc</h3>
+          <ul>
+            <li><a href="#newsletter">Doprava a platba</a></li>
+            <li><a href="#newsletter">Vrácení zboží</a></li>
+            <li><a href="#newsletter">Časté otázky</a></li>
+            <li><a href="mailto:ahoj@zrnko.cz">ahoj@zrnko.cz</a></li>
+            <li><a href="tel:+420777123456">+420 777 123 456</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="footer__bottom">
+        <span>© 2026 ZRNKO s.r.o. · Všechna práva vyhrazena</span>
+        <span class="footer__credit">Ukázkový projekt · Fotografie Unsplash</span>
+        <div class="payments" aria-label="Možnosti platby">
+          <span>VISA</span><span>Mastercard</span><span>Apple Pay</span><span>GoPay</span>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <div class="scrim" id="scrim" aria-hidden="true"></div>
+
+  <aside class="cart-drawer" id="cartDrawer" role="dialog" aria-modal="true" aria-labelledby="cartTitle" aria-hidden="true">
+    <div class="cart__head">
+      <h2 class="cart__title" id="cartTitle">Váš košík <span id="cartTitleCount">0 položek</span></h2>
+      <button class="close-btn" type="button" data-close aria-label="Zavřít košík"><svg class="icon" aria-hidden="true"><use href="#i-close"/></svg></button>
+    </div>
+    <div class="cart__shipping">
+      <p class="shipping-text" id="shippingText">Do dopravy zdarma zbývá <strong>1 000 Kč</strong></p>
+      <div class="shipping-bar" aria-hidden="true"><span id="shippingBar" style="width:0%"></span></div>
+    </div>
+    <div class="cart__items" id="cartItems"></div>
+    <div class="cart__foot">
+      <div class="cart__row"><span>Mezisoučet</span><span id="cartSubtotal">0 Kč</span></div>
+      <div class="cart__row"><span>Doprava</span><span id="cartShipping">Zdarma</span></div>
+      <div class="cart__row cart__row--total"><span>Celkem</span><span id="cartTotal">0 Kč</span></div>
+      <button class="btn btn--primary" type="button" id="checkoutBtn">
+        Přejít k pokladně
+        <span class="btn__icon"><svg class="icon" aria-hidden="true"><use href="#i-arrow"/></svg></span>
+      </button>
+      <p class="cart__note"><svg class="icon" aria-hidden="true"><use href="#i-lock"/></svg> Ukázkový obchod · platba není aktivní</p>
+    </div>
+  </aside>
+
+  <div class="modal" id="quickView" role="dialog" aria-modal="true" aria-labelledby="qvTitle" aria-hidden="true">
+    <div class="modal__panel" id="quickViewPanel">
+      <button class="close-btn modal__close" type="button" data-close aria-label="Zavřít náhled"><svg class="icon" aria-hidden="true"><use href="#i-close"/></svg></button>
+      <div id="quickViewContent"></div>
+    </div>
+  </div>
+
+  <div class="modal" id="checkoutModal" role="dialog" aria-modal="true" aria-labelledby="checkoutTitle" aria-hidden="true">
+    <div class="modal__panel checkout__panel">
+      <div class="checkout__icon"><svg class="icon" aria-hidden="true"><use href="#i-check"/></svg></div>
+      <h2 id="checkoutTitle">Děkujeme za nákup!</h2>
+      <p>Tohle je ukázkový e-shop, takže se nic nestrhlo. Vaše objednávka ale vypadá naprosto reálně.</p>
+      <div class="checkout__order" id="checkoutOrder"></div>
+      <button class="btn btn--primary" type="button" data-close>Pokračovat v prohlížení</button>
+      <p class="checkout__note">Objednávka byla vytvořena pouze pro demonstraci.</p>
+    </div>
+  </div>
+
+  <div class="search-panel" id="searchPanel" role="dialog" aria-modal="true" aria-label="Hledat kávu" aria-hidden="true">
+    <div class="search__head">
+      <svg class="icon" aria-hidden="true"><use href="#i-search"/></svg>
+      <label class="sr-only" for="searchInput">Hledat kávu</label>
+      <input class="search__input" id="searchInput" type="search" placeholder="Hledejte kávu, původ nebo chuť…" autocomplete="off">
+      <button class="close-btn search__close" type="button" data-close aria-label="Zavřít hledání"><svg class="icon" aria-hidden="true"><use href="#i-close"/></svg></button>
+    </div>
+    <div class="search__body">
+      <p class="search__label">Populární hledání</p>
+      <div class="search__chips">
+        <button class="search-chip" type="button" data-query="espresso">espresso</button>
+        <button class="search-chip" type="button" data-query="Etiopie">Etiopie</button>
+        <button class="search-chip" type="button" data-query="dekaf">dekaf</button>
+        <button class="search-chip" type="button" data-query="dárek">dárek</button>
+      </div>
+      <p class="search__label" id="searchLabel">Doporučujeme</p>
+      <div class="search-results" id="searchResults"></div>
+    </div>
+    <div class="search__foot"><span><kbd>Esc</kbd> zavřít</span><span>Hledáme v názvech, původu i chutích</span></div>
+  </div>
+
+  <div class="mobile-menu" id="mobileMenu" role="dialog" aria-modal="true" aria-label="Menu" aria-hidden="true">
+    <div class="mobile-menu__head">
+      <a class="brand" href="#top">
+        <svg class="brand__mark icon" aria-hidden="true"><use href="#i-bean"/></svg>
+        <span>zrnko</span><span class="brand__dot">.</span>
+      </a>
+      <button class="close-btn" type="button" data-close aria-label="Zavřít menu"><svg class="icon" aria-hidden="true"><use href="#i-close"/></svg></button>
+    </div>
+    <nav class="mobile-menu__nav" aria-label="Mobilní navigace">
+      <a href="#obchod">Obchod <svg class="icon" aria-hidden="true"><use href="#i-arrow"/></svg></a>
+      <a href="#pribeh">Náš příběh <svg class="icon" aria-hidden="true"><use href="#i-arrow"/></svg></a>
+      <a href="#predplatne">Předplatné <svg class="icon" aria-hidden="true"><use href="#i-arrow"/></svg></a>
+      <a href="#hodnoceni">Recenze <svg class="icon" aria-hidden="true"><use href="#i-arrow"/></svg></a>
+    </nav>
+    <div class="mobile-menu__foot">
+      <a class="btn btn--primary" href="#obchod">Prozkoumat kávu <span class="btn__icon"><svg class="icon" aria-hidden="true"><use href="#i-arrow"/></svg></span></a>
+      <div class="mobile-menu__contact"><span>ahoj@zrnko.cz</span><span>Praha 7</span></div>
+    </div>
+  </div>
+
+  <div class="toast" id="toast" role="status" aria-live="polite"></div>
+
+  <script src="js/data.js?v=20261107a"></script>
+  <script src="js/app.js?v=20261107a"></script>
+</body>
+</html>
+

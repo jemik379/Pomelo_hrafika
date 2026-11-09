@@ -1,0 +1,9 @@
+{
+  "name": "pomelo-studio",
+  "version": "1.0.0",
+  "private": true,
+  "description": "Ukázkový web malého digitálního studia Pomelo",
+  "scripts": {
+    "start": "node server.js"
+  }
+}

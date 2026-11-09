@@ -1,0 +1,207 @@
+<!DOCTYPE html>
+<html lang="cs">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Pohled — fotografické portfolio</title>
+<meta name="description" content="Fotografické portfolio — minimalistické černobílé snímky, architektura a portréty.">
+<meta name="theme-color" content="#0a0a0a">
+<meta property="og:title" content="Pohled — fotografické portfolio">
+<meta property="og:description" content="Minimalistické černobílé fotografie, architektura a portréty.">
+<meta name="robots" content="noindex, nofollow">
+<link rel="icon" href="assets/favicon.svg" type="image/svg+xml">
+<link rel="preload" href="css/main.css?v=20261108a" as="style">
+<link rel="stylesheet" href="css/main.css?v=20261108a">
+<script src="js/app.js?v=20261108a" defer></script>
+</head>
+<body class="pohled">
+<a class="skip-link" href="#main">Přejít na obsah</a>
+
+<header class="site-header" data-header>
+<div class="container header-inner">
+<a class="brand" href="#uvod" aria-label="Pohled, úvod">Pohled</a>
+<nav class="desktop-nav" aria-label="Hlavní navigace">
+<a class="nav-link" href="#uvod">Úvod</a>
+<a class="nav-link" href="#galerie">Galerie</a>
+<a class="nav-link" href="#projekty">Projekty</a>
+<a class="nav-link" href="#kontakt">Kontakt</a>
+</nav>
+<button class="menu-toggle" type="button" aria-controls="mobile-menu" aria-expanded="false" aria-label="Otevřít menu" data-menu-toggle>
+<span class="menu-bars" aria-hidden="true"><i></i><i></i><i></i></span>
+</button>
+</div>
+</header>
+
+<div class="mobile-menu" id="mobile-menu" data-mobile-menu aria-hidden="true" inert>
+<div class="mobile-menu-inner">
+<button class="menu-close" type="button" aria-label="Zavřít menu" data-menu-close>×</button>
+<nav class="mobile-nav" aria-label="Mobilní navigace">
+<a href="#uvod"><span>01</span>Úvod</a>
+<a href="#galerie"><span>02</span>Galerie</a>
+<a href="#projekty"><span>03</span>Projekty</a>
+<a href="#kontakt"><span>04</span>Kontakt</a>
+</nav>
+</div>
+</div>
+
+<main id="main">
+
+<section class="hero" id="uvod" aria-labelledby="hero-title">
+<div class="hero-inner container">
+<div class="hero-copy">
+<p class="eyebrow" data-reveal>Fotografické portfolio</p>
+<h1 id="hero-title" data-reveal data-reveal-delay=".05s">Zachyťte <em>okamžik.</em></h1>
+<p class="lead" data-reveal data-reveal-delay=".1s">Minimalistická černobílá fotografie — architektura, portréty a detaily.</p>
+<div class="hero-actions" data-reveal data-reveal-delay=".15s">
+<a class="btn btn--primary" href="#galerie">Prohlédnout galerii</a>
+<a class="btn btn--light" href="#projekty">Vybrat projekt</a>
+</div>
+</div>
+<figure class="hero-figure" data-reveal data-reveal-delay=".1s">
+<img src="img/hero.webp" alt="Černobílý snímek mrakodrapů focený z podhledu" width="800" height="1000" fetchpriority="high" decoding="async">
+<figcaption>New York, 2024 · osobní projekt</figcaption>
+</figure>
+</div>
+</section>
+
+<section class="section galerie" id="galerie" aria-labelledby="galerie-title">
+<div class="container">
+<div class="section-head section-head--galerie">
+<p class="section-label" data-reveal><span>02</span> Galerie</p>
+<h2 id="galerie-title" data-reveal data-reveal-delay=".05s">Snímky, které mluví <em>samy.</em></h2>
+<p class="section-intro" data-reveal data-reveal-delay=".1s">Výběr z posledních prací. Každý snímek je k dispozici jako tisk. Klikněte pro zvětšení.</p>
+</div>
+
+<div class="photo-grid" data-reveal>
+<figure class="photo-card">
+<button class="photo-open" type="button" data-photo aria-label="Zvětšit fotografii: Ulice, ranní světlo">
+<img src="img/photo-01.webp" alt="Prázdná newyorská ulice mezi mrakodrapy v ranním světle" width="800" height="1000" loading="lazy" decoding="async">
+</button>
+<figcaption>Ulice, ranní světlo</figcaption>
+</figure>
+<figure class="photo-card">
+<button class="photo-open" type="button" data-photo aria-label="Zvětšit fotografii: Portrét, přirozený smích">
+<img src="img/photo-02.webp" alt="Černobílý portrét usmívající se ženy v černém roláku" width="800" height="1000" loading="lazy" decoding="async">
+</button>
+<figcaption>Portrét, přirozený smích</figcaption>
+</figure>
+<figure class="photo-card">
+<button class="photo-open" type="button" data-photo aria-label="Zvětšit fotografii: Architektura, sklo a beton">
+<img src="img/photo-03.webp" alt="Černobílý detail moderní budovy s prosklenou fasádou" width="800" height="1000" loading="lazy" decoding="async">
+</button>
+<figcaption>Architektura, sklo a beton</figcaption>
+</figure>
+<figure class="photo-card">
+<button class="photo-open" type="button" data-photo aria-label="Zvětšit fotografii: Portrét, klid">
+<img src="img/photo-04.webp" alt="Černobílý portrét muže v košili a pleteném svetru" width="800" height="1000" loading="lazy" decoding="async">
+</button>
+<figcaption>Portrét, klid</figcaption>
+</figure>
+<figure class="photo-card">
+<button class="photo-open" type="button" data-photo aria-label="Zvětšit fotografii: Koncert, světlo a ruch">
+<img src="img/photo-05.webp" alt="Černobílý snímek koncertu s rukama publika a osvětleným pódiem" width="800" height="1000" loading="lazy" decoding="async">
+</button>
+<figcaption>Koncert, světlo a ruch</figcaption>
+</figure>
+<figure class="photo-card">
+<button class="photo-open" type="button" data-photo aria-label="Zvětšit fotografii: Interiér, linka a světlo">
+<img src="img/photo-06.webp" alt="Černobílý interiér chodby se skleněnými příčkami a světlem na podlaze" width="800" height="1000" loading="lazy" decoding="async">
+</button>
+<figcaption>Interiér, linka a světlo</figcaption>
+</figure>
+</div>
+</div>
+</section>
+
+<section class="section projekty" id="projekty" aria-labelledby="projekty-title">
+<div class="container">
+<div class="section-head section-head--projekty">
+<p class="section-label" data-reveal><span>03</span> Projekty</p>
+<h2 id="projekty-title" data-reveal data-reveal-delay=".05s">Zakázky, které <em>zůstaly.</em></h2>
+<p class="section-intro" data-reveal data-reveal-delay=".1s">Vybrané zakázky pro klienty z architektury, módy a kultury.</p>
+</div>
+
+<div class="project-list" data-reveal>
+<article class="project-card">
+<div class="project-info">
+<h3>Sedmý dům</h3>
+<p class="project-meta">Architektura · 2024</p>
+<p class="project-desc">Série exteriérových snímků novostavby rodinného domu v Brně. Přirozené světlo, beton, dřevo.</p>
+</div>
+<a class="project-link" href="#kontakt">Poptat podobný projekt <span class="arrow">→</span></a>
+</article>
+<article class="project-card">
+<div class="project-info">
+<h3>Kolekce Léto</h3>
+<p class="project-meta">Móda · 2023</p>
+<p class="project-desc">Lookbook pro lokální módní značku. Studio, černé pozadí, jemné detaily látek.</p>
+</div>
+<a class="project-link" href="#kontakt">Poptat podobný projekt <span class="arrow">→</span></a>
+</article>
+<article class="project-card">
+<div class="project-info">
+<h3>Galerie U Divadla</h3>
+<p class="project-meta">Kultura · 2023</p>
+<p class="project-desc">Dokumentace vernisáže a instalace. Reportážní snímky z otevření výstavy.</p>
+</div>
+<a class="project-link" href="#kontakt">Poptat podobný projekt <span class="arrow">→</span></a>
+</article>
+</div>
+</div>
+</section>
+
+<section class="kontakt" id="kontakt" aria-labelledby="kontakt-title">
+<div class="container kontakt-inner">
+<div class="kontakt-copy" data-reveal>
+<p class="section-label"><span>04</span> Kontakt</p>
+<h2 id="kontakt-title">Napište <em>mi.</em></h2>
+<p class="lead">Poptávky na focení, tisky a spolupráci posílejte e-mailem. Odpovídám do dvou pracovních dnů.</p>
+<address class="kontakt-adres">
+<p><strong>Pohled fotografie</strong></p>
+<p>Brno, Česká republika</p>
+<p><a href="mailto:hello@pohled.example">hello@pohled.example</a></p>
+</address>
+</div>
+<div class="kontakt-form-wrap" data-reveal data-reveal-delay=".1s">
+<form class="kontakt-form" data-contact-form novalidate>
+<fieldset class="sr"><legend>Kontaktní formulář</legend></fieldset>
+<div class="row">
+<label class="fld"><span>Jméno</span><input id="f-name" name="name" autocomplete="name" required></label>
+<label class="fld"><span>E-mail</span><input id="f-mail" name="email" type="email" autocomplete="email" required></label>
+</div>
+<label class="fld"><span>Zpráva</span><textarea id="f-msg" name="msg" rows="4" required></textarea></label>
+<button class="btn btn--primary" type="submit">Odeslat zprávu <span class="arrow">→</span></button>
+<p class="status" id="formStatus" role="status" aria-live="polite"></p>
+</form>
+</div>
+</div>
+</section>
+
+</main>
+
+<footer class="site-footer">
+<div class="container footer-inner">
+<p class="footer-copy">© 2026 Pohled fotografie · Všechna práva vyhrazena</p>
+<nav class="footer-nav" aria-label="Patička - navigace">
+<a href="#galerie">Galerie</a>
+<a href="#projekty">Projekty</a>
+<a href="#kontakt">Kontakt</a>
+</nav>
+<p class="footer-note">Ukázkový web — smyšlený obsah. Fotografie: Unsplash.</p>
+</div>
+</footer>
+
+<dialog class="lightbox" id="lightbox" aria-label="Zvětšená fotografie">
+<div class="lightbox-inner">
+<button class="lightbox-close" type="button" aria-label="Zavřít zvětšenou fotografii" data-lightbox-close>×</button>
+<figure>
+<img id="lightboxImage" src="" alt="">
+<figcaption id="lightboxCaption"></figcaption>
+</figure>
+<button class="lightbox-nav lightbox-nav--prev" type="button" aria-label="Předchozí fotografie" data-lightbox-prev>←</button>
+<button class="lightbox-nav lightbox-nav--next" type="button" aria-label="Další fotografie" data-lightbox-next>→</button>
+</div>
+</dialog>
+
+</body>
+</html>

@@ -1,0 +1,7 @@
+User-agent: *
+Allow: /
+Disallow: /api/
+Disallow: /data/
+Disallow: /404.html
+
+Sitemap: https://www.pomelostudio.cz/sitemap.xml

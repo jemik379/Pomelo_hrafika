@@ -1,0 +1,983 @@
+<!DOCTYPE html>
+<html lang="cs">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Pomelo studio — weby, které mají šťávu</title>
+  <meta name="description" content="Malé webové studio pro malé firmy. Navrhujeme a programujeme weby, e-shopy a rezervační systémy, které jsou rychlé, lidské a připravené vydělávat.">
+  <meta name="theme-color" content="#F2EFE6">
+  <meta name="robots" content="index, follow, max-image-preview:large">
+  <link rel="canonical" href="https://www.pomelostudio.cz/">
+  <meta property="og:site_name" content="Pomelo studio">
+  <meta property="og:title" content="Pomelo studio — weby, které mají šťávu">
+  <meta property="og:description" content="Weby na míru pro malé firmy. Osobně, bez zbytečností a s důrazem na výsledek.">
+  <meta property="og:type" content="website">
+  <meta property="og:locale" content="cs_CZ">
+  <meta property="og:url" content="https://www.pomelostudio.cz/">
+  <meta property="og:image" content="https://www.pomelostudio.cz/assets/og-image.png">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+  <meta property="og:image:alt" content="Pomelo studio — weby, které mají šťávu">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Pomelo studio — weby, které mají šťávu">
+  <meta name="twitter:description" content="Weby na míru pro malé firmy. Osobně, bez zbytečností a s důrazem na výsledek.">
+  <meta name="twitter:image" content="https://www.pomelostudio.cz/assets/og-image.png">
+  <link rel="icon" href="assets/favicon.svg" type="image/svg+xml">
+  <link rel="apple-touch-icon" href="assets/apple-touch-icon.png">
+  <link rel="manifest" href="site.webmanifest">
+  <link rel="preload" href="assets/fonts/fraunces-latin.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="preload" href="assets/fonts/fraunces-italic-latin.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="preload" href="assets/fonts/manrope-latin.woff2" as="font" type="font/woff2" crossorigin>
+  <script src="js/boot.js?v=20261107a"></script>
+  <link rel="stylesheet" href="css/style.css?v=20261107a">
+  <script src="js/main.js?v=20261107a" defer></script>
+  <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "ProfessionalService",
+      "name": "Pomelo studio",
+      "url": "https://www.pomelostudio.cz/",
+      "image": "https://www.pomelostudio.cz/assets/og-image.png",
+      "description": "Malé webové studio pro malé firmy. Weby, e-shopy a rezervační systémy na míru.",
+      "email": "ahoj@pomelostudio.cz",
+      "telephone": "+420777321654",
+      "priceRange": "20 000–150 000 Kč",
+      "areaServed": {
+        "@type": "Country",
+        "name": "Česká republika"
+      },
+      "address": {
+        "@type": "PostalAddress",
+        "addressLocality": "Brno",
+        "addressCountry": "CZ"
+      },
+      "knowsAbout": ["Webdesign", "Vývoj webů", "E-shopy", "Rezervační systémy", "UX design"]
+    }
+  </script>
+</head>
+<body id="top">
+  <a class="skip-link" href="#main">Přejít na obsah</a>
+  <div class="scroll-progress" aria-hidden="true"><span data-scroll-progress></span></div>
+
+  <svg class="svg-sprite" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+    <symbol id="icon-citrus" viewBox="0 0 40 40">
+      <circle cx="19" cy="22" r="16" fill="#D9EF6D" stroke="currentColor" stroke-width="1.7"/>
+      <g stroke="currentColor" stroke-width="1.4" stroke-linecap="round">
+        <path d="M19 6v32M3 22h32M7.5 10.5l23 23M30.5 10.5l-23 23"/>
+      </g>
+      <circle cx="19" cy="22" r="3" fill="currentColor"/>
+      <path d="M20 5.6C21.4 0 28.5-.4 30.7 4c-3.6 2.7-7 3.5-10.7 1.6Z" fill="#FF7A4D" stroke="currentColor" stroke-width="1.7" stroke-linejoin="round"/>
+    </symbol>
+
+    <symbol id="icon-arrow-up" viewBox="0 0 24 24">
+      <path d="M7 17 17 7M9 7h8v8" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"/>
+    </symbol>
+
+    <symbol id="icon-arrow-right" viewBox="0 0 24 24">
+      <path d="M4 12h16M14 6l6 6-6 6" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"/>
+    </symbol>
+
+    <symbol id="icon-arrow-down" viewBox="0 0 24 24">
+      <path d="M12 4v16M6 14l6 6 6-6" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"/>
+    </symbol>
+
+    <symbol id="icon-check" viewBox="0 0 24 24">
+      <path d="m4.5 12.5 4.5 4.5L19.5 6.5" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+    </symbol>
+
+    <symbol id="icon-close" viewBox="0 0 24 24">
+      <path d="m6 6 12 12M18 6 6 18" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/>
+    </symbol>
+
+    <symbol id="icon-mail" viewBox="0 0 24 24">
+      <rect x="3" y="5" width="18" height="14" rx="2.5" fill="none" stroke="currentColor" stroke-width="1.6"/>
+      <path d="m4 7 8 6 8-6" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/>
+    </symbol>
+
+    <symbol id="icon-phone" viewBox="0 0 24 24">
+      <path d="M8.3 3.7 10 7.5 7.8 9.3c1.1 2.6 3.2 4.7 5.8 5.9l1.8-2.3 3.8 1.7.3 3.3c0 1.1-.9 2-2 2C9.7 19.9 4.1 14.3 4.1 6.4c0-1.1.9-2 2-2l2.2-.7Z" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/>
+    </symbol>
+
+    <symbol id="icon-pin" viewBox="0 0 24 24">
+      <path d="M20 10.5c0 5.5-8 11-8 11s-8-5.5-8-11a8 8 0 1 1 16 0Z" fill="none" stroke="currentColor" stroke-width="1.6"/>
+      <circle cx="12" cy="10.5" r="2.7" fill="none" stroke="currentColor" stroke-width="1.6"/>
+    </symbol>
+
+    <symbol id="icon-monitor" viewBox="0 0 24 24">
+      <rect x="2.5" y="4" width="19" height="13.5" rx="2.4" fill="none" stroke="currentColor" stroke-width="1.6"/>
+      <path d="M8 21h8M12 17.5V21M6.5 8.5h6M6.5 12h10" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/>
+    </symbol>
+
+    <symbol id="icon-bag" viewBox="0 0 24 24">
+      <path d="M4.5 8.5h15l-1 12h-13l-1-12Z" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linejoin="round"/>
+      <path d="M8.5 9V6.5a3.5 3.5 0 0 1 7 0V9" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/>
+      <path d="M9 14.5c1 1.2 2 1.8 3 1.8s2-.6 3-1.8" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/>
+    </symbol>
+
+    <symbol id="icon-calendar" viewBox="0 0 24 24">
+      <rect x="3" y="5" width="18" height="16" rx="2.5" fill="none" stroke="currentColor" stroke-width="1.6"/>
+      <path d="M7 3v4M17 3v4M3 9h18M8 13h3M8 16.5h6" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/>
+    </symbol>
+
+    <symbol id="icon-care" viewBox="0 0 24 24">
+      <path d="M12 20s-8-4.6-8-10.1c0-3.2 2.3-5.4 5-5.4 1.4 0 2.5.6 3 1.8.5-1.2 1.6-1.8 3-1.8 2.7 0 5 2.2 5 5.4C20 15.4 12 20 12 20Z" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linejoin="round"/>
+      <path d="m15.8 3.2.5 2.1 2.1.5-2.1.5-.5 2.1-.5-2.1-2.1-.5 2.1-.5.5-2.1Z" fill="currentColor"/>
+    </symbol>
+
+    <symbol id="icon-lock" viewBox="0 0 24 24">
+      <rect x="5" y="10" width="14" height="10" rx="2" fill="none" stroke="currentColor" stroke-width="1.8"/>
+      <path d="M8 10V7.5a4 4 0 0 1 8 0V10" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/>
+    </symbol>
+
+    <symbol id="icon-star" viewBox="0 0 24 24">
+      <path d="m12 2.8 2.8 5.7 6.2.9-4.5 4.4 1.1 6.2-5.6-2.9-5.6 2.9 1.1-6.2L3 9.4l6.2-.9L12 2.8Z" fill="currentColor"/>
+    </symbol>
+
+    <symbol id="icon-spark" viewBox="0 0 24 24">
+      <path d="M12 1.5c.6 6.4 3.1 8.9 9.5 9.5-6.4.6-8.9 3.1-9.5 9.5-.6-6.4-3.1-8.9-9.5-9.5C8.9 10.4 11.4 7.9 12 1.5Z" fill="currentColor"/>
+    </symbol>
+
+    <symbol id="icon-bread" viewBox="0 0 64 64">
+      <ellipse cx="32" cy="36" rx="24" ry="16" fill="#C98B50" stroke="#3D2B20" stroke-width="1.4"/>
+      <path d="M14 34c7-10 29-12 37 0" fill="none" stroke="#F0C386" stroke-width="2.2" stroke-linecap="round" opacity=".8"/>
+      <path d="m23 25-4 17M32 22l-2 20M41 24l-1 18" fill="none" stroke="#F7E3B9" stroke-width="2" stroke-linecap="round" opacity=".9"/>
+      <path d="M22 52c6 3 14 3 20 0" fill="none" stroke="#3D2B20" stroke-width="1.4" stroke-linecap="round"/>
+    </symbol>
+
+    <symbol id="icon-croissant" viewBox="0 0 64 64">
+      <path d="M7 39c4-12 16-21 28-20 8 .5 14 5 16 11-6-3-12-2-17 3-4-6-11-9-18-6-4 2-6 5-9 12Z" fill="#D99A55" stroke="#3D2B20" stroke-width="1.4" stroke-linejoin="round"/>
+      <path d="M50 44c-5 9-16 14-27 11-6-1.5-10-6-12-11 6 3 13 2 18-2 5 5 14 6 21 2Z" fill="#C78445" stroke="#3D2B20" stroke-width="1.4" stroke-linejoin="round"/>
+      <path d="M27 22c2 5 2 10 0 15M37 22c-2 5-2 10 0 15" fill="none" stroke="#F2C989" stroke-width="1.6" stroke-linecap="round" opacity=".8"/>
+    </symbol>
+
+    <symbol id="icon-coffee" viewBox="0 0 64 64">
+      <path d="M14 22h33v13c0 9-7 16-16.5 16S14 44 14 35V22Z" fill="#F8EAD3" stroke="#3D2B20" stroke-width="1.5"/>
+      <path d="M47 26h3.5a7.5 7.5 0 0 1 0 15H47" fill="none" stroke="#3D2B20" stroke-width="1.5"/>
+      <path d="M22 16c0-4 4-4 4-8M33 16c0-4 4-4 4-8M44 16c0-4 4-4 4-8" fill="none" stroke="#3D2B20" stroke-width="1.5" stroke-linecap="round" opacity=".6"/>
+      <path d="M14 51h37" stroke="#3D2B20" stroke-width="1.5" stroke-linecap="round"/>
+    </symbol>
+
+    <symbol id="icon-leaf" viewBox="0 0 24 24">
+      <path d="M20.5 4.2C13.7 3.8 5 6.5 5 14.2c0 2.6 1.4 4.5 3.6 5.2 5.2 1.6 10.5-3.6 11.9-15.2Z" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linejoin="round"/>
+      <path d="M4 21c2.9-5.5 6.5-9 12-11.5" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/>
+    </symbol>
+  </svg>
+
+  <div class="page-grain" aria-hidden="true"></div>
+
+  <header class="site-header" data-header>
+    <div class="container header-inner">
+      <a class="brand" href="#top" aria-label="Pomelo studio, zpět nahoru">
+        <svg class="brand-mark" viewBox="0 0 40 40" aria-hidden="true"><use href="#icon-citrus"/></svg>
+        <span class="brand-name">pomelo<span class="brand-sub">studio</span></span>
+      </a>
+
+      <nav class="desktop-nav" aria-label="Hlavní navigace">
+        <a class="nav-link" href="#studio">Studio</a>
+        <a class="nav-link" href="#sluzby">Služby</a>
+        <a class="nav-link" href="#ukazky">Ukázky</a>
+        <a class="nav-link" href="#proces">Proces</a>
+        <a class="nav-link" href="#cenik">Ceník</a>
+      </nav>
+
+      <a class="btn btn--header" href="#kontakt">
+        <span>Nezávazně poptat</span>
+        <span class="btn-icon"><svg viewBox="0 0 24 24" aria-hidden="true"><use href="#icon-arrow-up"/></svg></span>
+      </a>
+
+      <button class="menu-toggle" type="button" aria-controls="mobile-menu" aria-expanded="false" data-menu-toggle>
+        <span>Menu</span>
+        <span class="menu-bars" aria-hidden="true"><i></i><i></i></span>
+      </button>
+    </div>
+  </header>
+
+  <div class="mobile-menu" id="mobile-menu" role="dialog" aria-modal="true" aria-label="Mobilní navigace" aria-hidden="true" inert data-mobile-menu>
+    <div class="mobile-menu-inner">
+      <div class="mobile-menu-top">
+        <a class="brand brand--light" href="#top" aria-label="Pomelo studio, zpět nahoru">
+          <svg class="brand-mark" viewBox="0 0 40 40" aria-hidden="true"><use href="#icon-citrus"/></svg>
+          <span class="brand-name">pomelo<span class="brand-sub">studio</span></span>
+        </a>
+        <button class="menu-close" type="button" aria-label="Zavřít menu" data-menu-close>
+          <svg viewBox="0 0 24 24" aria-hidden="true"><use href="#icon-close"/></svg>
+        </button>
+      </div>
+
+      <nav class="mobile-nav" aria-label="Mobilní navigace">
+        <a href="#studio"><span>01</span>Studio</a>
+        <a href="#sluzby"><span>02</span>Služby</a>
+        <a href="#ukazky"><span>03</span>Ukázky</a>
+        <a href="#proces"><span>04</span>Proces</a>
+        <a href="#cenik"><span>05</span>Ceník</a>
+        <a href="#faq"><span>06</span>Otázky</a>
+      </nav>
+
+      <div class="mobile-menu-footer">
+        <a class="mobile-menu-mail" href="mailto:ahoj@pomelostudio.cz">ahoj@pomelostudio.cz</a>
+        <p>Malé studio. Velká péče.<br>Brno &amp; online po celé ČR.</p>
+        <a class="btn btn--light" href="#kontakt">
+          <span>Pojďme na projekt</span>
+          <span class="btn-icon"><svg viewBox="0 0 24 24" aria-hidden="true"><use href="#icon-arrow-up"/></svg></span>
+        </a>
+      </div>
+    </div>
+  </div>
+
+  <main id="main">
+    <section class="hero" aria-labelledby="hero-title">
+      <div class="hero-scribble hero-scribble--one" aria-hidden="true"></div>
+      <div class="hero-scribble hero-scribble--two" aria-hidden="true"></div>
+
+      <div class="container hero-grid">
+        <div class="hero-copy">
+          <p class="eyebrow" data-reveal>
+            <span class="eyebrow-dot" aria-hidden="true"></span>
+            Webdesign &amp; vývoj pro malé firmy
+          </p>
+
+          <h1 class="hero-title" id="hero-title" data-reveal data-reveal-delay=".07s">
+            Weby, které<br>
+            mají <em>šťávu.<span class="title-underline" aria-hidden="true"><svg viewBox="0 0 320 22" preserveAspectRatio="none"><path d="M5 14c52-9 122-11 196-7 42 2 78 6 114 12" fill="none" stroke="currentColor" stroke-width="6" stroke-linecap="round"/></svg></span></em>
+          </h1>
+
+          <p class="hero-text" data-reveal data-reveal-delay=".14s">
+            Navrhujeme a programujeme weby pro malé firmy, které chtějí vypadat profesionálně — a zákazníkům se v nich snadno rozhoduje.
+          </p>
+
+          <div class="hero-actions" data-reveal data-reveal-delay=".21s">
+            <a class="btn btn--primary" href="#kontakt">
+              <span>Chci nový web</span>
+              <span class="btn-icon"><svg viewBox="0 0 24 24" aria-hidden="true"><use href="#icon-arrow-up"/></svg></span>
+            </a>
+
+          </div>
+
+          <p class="hero-note" data-reveal data-reveal-delay=".28s">
+            <span class="hero-note-icon"><svg viewBox="0 0 24 24" aria-hidden="true"><use href="#icon-check"/></svg></span>
+            První konzultace je zdarma. Mluvíme lidsky, ne v kódu.
+          </p>
+        </div>
+
+        <div class="hero-art" data-hero-scene data-reveal data-reveal-delay=".16s">
+          <div class="hero-blob" aria-hidden="true"></div>
+          <div class="scene-glow" aria-hidden="true"></div>
+          <div class="hero-dot" aria-hidden="true"></div>
+          <div class="scene-object scene-object--ring" data-depth="0.55" aria-hidden="true"></div>
+          <div class="scene-object scene-object--orb" data-depth="1.2" aria-hidden="true"></div>
+          <div class="scene-object scene-object--star" data-depth="1.8" aria-hidden="true">
+            <svg viewBox="0 0 100 100">
+              <defs>
+                <linearGradient id="heroStarGradient" x1="14" y1="10" x2="84" y2="92" gradientUnits="userSpaceOnUse">
+                  <stop offset="0" stop-color="#fff7cf"/>
+                  <stop offset=".36" stop-color="#ff9d76"/>
+                  <stop offset="1" stop-color="#c24624"/>
+                </linearGradient>
+              </defs>
+              <path d="M50 3c4 28 15 39 43 47-28 8-39 19-43 47-4-28-15-39-43-47 28-8 39-19 43-47Z" fill="url(#heroStarGradient)"/>
+              <path d="M50 12c2.5 18 10 28 27 36-15 3-24 10-29 24-1-10-5-18-12-24 9-5 13-19 14-36Z" fill="none" stroke="#fff9e8" stroke-width="2" opacity=".45"/>
+            </svg>
+          </div>
+
+          <div class="float-note" aria-hidden="true">
+            <span class="float-star">✦</span>
+            <span>od nápadu<br><strong>po spuštění</strong></span>
+          </div>
+
+          <div class="hero-stage">
+            <div class="hero-site" role="img" aria-label="Ukázka webu pekárny Kvásek">
+              <div class="browser browser--hero" aria-hidden="true">
+              <div class="browser-bar">
+                <img class="demo-browser-favicon" src="" alt="" aria-hidden="true" width="16" height="16">
+                <span class="browser-url">
+                  <svg viewBox="0 0 24 24"><use href="#icon-lock"/></svg>
+                  kvasek.cz
+                </span>
+                <span class="browser-more">•••</span>
+              </div>
+
+              <div class="kvasek-mini">
+                <div class="kvasek-nav">
+                  <div class="kvasek-brand">Kvásek<small>pekařství &amp; kavárna</small></div>
+                  <div class="kvasek-links"><span>Pekařství</span><span>Kavárna</span><span>O nás</span></div>
+                  <span class="kvasek-nav-cta">Objednat <svg viewBox="0 0 24 24"><use href="#icon-arrow-up"/></svg></span>
+                </div>
+
+                <div class="kvasek-hero">
+                  <div class="kvasek-copy">
+                    <span class="kvasek-kicker">pečeno v Troubsku</span>
+                    <h3>Ráno voní nejlíp.</h3>
+                    <p>Kváskový chléb, máslové pečivo a káva, která vás postaví na nohy.</p>
+                    <span class="kvasek-btn">Nakoupit <i>→</i></span>
+                  </div>
+                  <div class="kvasek-visual">
+                    <span class="kvasek-sticker">dnes<br><strong>čerstvé</strong></span>
+                    <span class="loaf-halo"></span>
+                    <svg class="loaf-art" viewBox="0 0 64 64"><use href="#icon-bread"/></svg>
+                    <svg class="leaf-art" viewBox="0 0 24 24"><use href="#icon-leaf"/></svg>
+                  </div>
+                </div>
+
+                <div class="kvasek-products">
+                  <div class="kvasek-product">
+                    <span class="product-icon"><svg viewBox="0 0 64 64"><use href="#icon-bread"/></svg></span>
+                    <span><strong>Kváskový chléb</strong><small>z kvasu, 1,2 kg</small></span>
+                    <b>89 Kč</b>
+                  </div>
+                  <div class="kvasek-product">
+                    <span class="product-icon"><svg viewBox="0 0 64 64"><use href="#icon-croissant"/></svg></span>
+                    <span><strong>Máslový croissant</strong><small>pečený ráno</small></span>
+                    <b>42 Kč</b>
+                  </div>
+                  <div class="kvasek-product">
+                    <span class="product-icon"><svg viewBox="0 0 64 64"><use href="#icon-coffee"/></svg></span>
+                    <span><strong>Filtr káva</strong><small>z pražírny</small></span>
+                    <b>65 Kč</b>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          </div>
+
+          <div class="hero-stamp" aria-hidden="true">
+            <svg class="stamp-text" viewBox="0 0 140 140">
+              <defs>
+                <path id="stampPath" d="M70,70 m-52,0 a52,52 0 1,1 104,0 a52,52 0 1,1 -104,0"/>
+              </defs>
+              <text><textPath href="#stampPath">MALÝ WEB · VELKÁ PÉČE · LIDSKÝ PŘÍSTUP · </textPath></text>
+            </svg>
+            <span class="stamp-center"><svg viewBox="0 0 24 24"><use href="#icon-spark"/></svg></span>
+          </div>
+
+          <span class="art-spark art-spark--one" aria-hidden="true">✦</span>
+          <span class="art-spark art-spark--two" aria-hidden="true">✦</span>
+        </div>
+      </div>
+    </section>
+
+    <section class="section intro" id="studio" aria-labelledby="studio-title">
+      <div class="container">
+        <div class="intro-head">
+          <p class="section-label" data-reveal><span>01</span> Proč Pomelo</p>
+          <div class="intro-heading" data-reveal data-reveal-delay=".06s">
+            <h2 id="studio-title">Malé studio.<br>Krátká cesta k <em>dobrému webu.</em></h2>
+            <p>Jsme studio, které má blíž k vaší kavárně než k firemnímu patru. Pracujeme bez prostředníků, zbytečných schůzek a velkých slov. Zato s pozorností k detailu a chutí udělat věc pořádně.</p>
+          </div>
+        </div>
+
+        <div class="values-grid">
+          <article class="value" data-reveal>
+            <div class="value-top">
+              <span class="value-icon"><svg viewBox="0 0 24 24" aria-hidden="true"><use href="#icon-spark"/></svg></span>
+              <span class="value-index">01</span>
+            </div>
+            <h3>Mluvíte přímo s tvůrcem</h3>
+            <p>Žádní account manageři. Od prvního nápadu po spuštění máte na drátě člověka, který web opravdu dělá.</p>
+          </article>
+          <article class="value" data-reveal data-reveal-delay=".07s">
+            <div class="value-top">
+              <span class="value-icon"><svg viewBox="0 0 24 24" aria-hidden="true"><use href="#icon-leaf"/></svg></span>
+              <span class="value-index">02</span>
+            </div>
+            <h3>Design se smyslem</h3>
+            <p>Nejen hezký obal. Struktura, texty a tlačítka vedou vaše zákazníky tam, kde se rozhoduje.</p>
+          </article>
+          <article class="value" data-reveal data-reveal-delay=".14s">
+            <div class="value-top">
+              <span class="value-icon"><svg viewBox="0 0 24 24" aria-hidden="true"><use href="#icon-citrus"/></svg></span>
+              <span class="value-index">03</span>
+            </div>
+            <h3>Web, který roste s vámi</h3>
+            <p>Snadná správa, čistý základ a technické zázemí. Aby web sloužil, nejen stárnul v šuplíku.</p>
+          </article>
+        </div>
+
+        <div class="intro-note" data-reveal>
+          <span class="intro-note-mark" aria-hidden="true">✦</span>
+          <p><strong>Věříme, že dobrý web nemusí být složitý.</strong> Musí dávat smysl, rychle se načíst a vydržet víc než jednu sezónu.</p>
+          <a class="text-link text-link--small" href="#sluzby"><span>Co umíme</span><svg viewBox="0 0 24 24" aria-hidden="true"><use href="#icon-arrow-down"/></svg></a>
+        </div>
+      </div>
+    </section>
+
+    <section class="section services" id="sluzby" aria-labelledby="services-title">
+      <div class="container">
+        <div class="section-head">
+          <p class="section-label" data-reveal><span>02</span> Co umíme</p>
+          <div class="section-head-row">
+            <h2 id="services-title" data-reveal data-reveal-delay=".06s">Od nápadu k webu,<br>který <em>pracuje.</em></h2>
+            <p class="section-intro" data-reveal data-reveal-delay=".12s">Ať potřebujete jednoduchou vizitku, e-shop, nebo rezervační systém — postaráme se o celou cestu. Bez zbytečností a s jasným cílem.</p>
+          </div>
+        </div>
+
+        <div class="service-grid">
+          <a class="service-card service-card--butter" href="#kontakt" data-service="web" data-reveal>
+            <div class="service-top">
+              <span class="service-icon"><svg viewBox="0 0 24 24" aria-hidden="true"><use href="#icon-monitor"/></svg></span>
+              <span class="service-arrow"><svg viewBox="0 0 24 24" aria-hidden="true"><use href="#icon-arrow-up"/></svg></span>
+            </div>
+            <div class="service-body">
+              <h3>Web na míru</h3>
+              <p>Firemní weby a landing pages, které vypadají dobře, rychle se načtou a jasně řeknou, proč si vybrat právě vás.</p>
+            </div>
+            <div class="service-foot">
+              <div class="service-tags"><span>Firemní web</span><span>Landing page</span><span>Portfolio</span></div>
+              <span class="service-cta">Chci vědět víc</span>
+            </div>
+          </a>
+
+          <a class="service-card service-card--peach" href="#kontakt" data-service="eshop" data-reveal data-reveal-delay=".07s">
+            <div class="service-top">
+              <span class="service-icon"><svg viewBox="0 0 24 24" aria-hidden="true"><use href="#icon-bag"/></svg></span>
+              <span class="service-arrow"><svg viewBox="0 0 24 24" aria-hidden="true"><use href="#icon-arrow-up"/></svg></span>
+            </div>
+            <div class="service-body">
+              <h3>E-shop, který prodává</h3>
+              <p>Přehledný e-shop s platbami, dopravou a jednoduchou správou. Navržený tak, aby cesta k objednávce byla co nejkratší.</p>
+            </div>
+            <div class="service-foot">
+              <div class="service-tags"><span>E-shop</span><span>Platby</span><span>Produktové karty</span></div>
+              <span class="service-cta">Chci vědět víc</span>
+            </div>
+          </a>
+
+          <a class="service-card service-card--sage" href="#kontakt" data-service="app" data-reveal data-reveal-delay=".14s">
+            <div class="service-top">
+              <span class="service-icon"><svg viewBox="0 0 24 24" aria-hidden="true"><use href="#icon-calendar"/></svg></span>
+              <span class="service-arrow"><svg viewBox="0 0 24 24" aria-hidden="true"><use href="#icon-arrow-up"/></svg></span>
+            </div>
+            <div class="service-body">
+              <h3>Rezervace &amp; systémy</h3>
+              <p>Rezervační systémy, klientské zóny a menší aplikace na míru. Méně ruční práce, více času pro vaše podnikání.</p>
+            </div>
+            <div class="service-foot">
+              <div class="service-tags"><span>Rezervace</span><span>Portál</span><span>Automatizace</span></div>
+              <span class="service-cta">Chci vědět víc</span>
+            </div>
+          </a>
+
+          <a class="service-card service-card--sky" href="#kontakt" data-service="care" data-reveal data-reveal-delay=".21s">
+            <div class="service-top">
+              <span class="service-icon"><svg viewBox="0 0 24 24" aria-hidden="true"><use href="#icon-care"/></svg></span>
+              <span class="service-arrow"><svg viewBox="0 0 24 24" aria-hidden="true"><use href="#icon-arrow-up"/></svg></span>
+            </div>
+            <div class="service-body">
+              <h3>Péče bez starostí</h3>
+              <p>Správa webu, drobné úpravy, zálohy a bezpečnost. A když se něco stane, jsme na příjmu. Bez ticketů a čekání.</p>
+            </div>
+            <div class="service-foot">
+              <div class="service-tags"><span>Správa</span><span>SEO základy</span><span>Analytika</span></div>
+              <span class="service-cta">Chci vědět víc</span>
+            </div>
+          </a>
+        </div>
+      </div>
+    </section>
+
+
+    <section class="section demos" id="ukazky" aria-labelledby="demos-title">
+      <span class="demos-watermark" aria-hidden="true">ukázky</span>
+      <div class="demos-aurora" aria-hidden="true"></div>
+      <div class="container">
+        <div class="section-head section-head--demos">
+          <p class="section-label" data-reveal><span>03</span> Ukázkové weby</p>
+          <div class="section-head-row">
+            <h2 id="demos-title" data-reveal data-reveal-delay=".06s">Weby, které si můžete <em>osahat.</em></h2>
+            <p class="section-intro" data-reveal data-reveal-delay=".12s">Všechny čtyři ukázky jsou živé weby. Otevřete je přímo tady — e-shop, školku, agenturu i fotografické portfolio si projděte celé, včetně formulářů a rezervací.</p>
+          </div>
+        </div>
+
+        <div class="demo-layout" data-reveal>
+          <div class="demo-tabs-panel">
+            <div class="demo-tabs-head">
+              <span>Vyberte náladu</span>
+              <span>04 ukázky</span>
+            </div>
+
+            <div class="demo-tabs" role="tablist" aria-label="Ukázkové weby" aria-orientation="vertical">
+              <button class="demo-tab is-active" type="button" role="tab" id="demoTabZrnko" aria-selected="true" aria-controls="demoPanel" tabindex="0" data-demo="zrnko">
+                <span class="demo-tab-index">01</span>
+                <span class="demo-tab-copy"><strong>Zrnko</strong><small>Pražírna &amp; e-shop</small><em>Živý web</em></span>
+                <img class="demo-tab-swatch demo-tab-swatch--zrnko" src="demos/zrnko/assets/favicon.svg" alt="" aria-hidden="true" width="60" height="60">
+              </button>
+              <button class="demo-tab" type="button" role="tab" id="demoTabLentilka" aria-selected="false" aria-controls="demoPanel" tabindex="-1" data-demo="lentilka">
+                <span class="demo-tab-index">02</span>
+                <span class="demo-tab-copy"><strong>Lentilka</strong><small>Školka &amp; dětská skupina</small><em>Živý web</em></span>
+                <img class="demo-tab-swatch demo-tab-swatch--lentilka" src="demos/lentilka/assets/favicon.svg" alt="" aria-hidden="true" width="60" height="60">
+              </button>
+
+              <button class="demo-tab" type="button" role="tab" id="demoTabProstor" aria-selected="false" aria-controls="demoPanel" tabindex="-1" data-demo="prostor">
+                <span class="demo-tab-index">03</span>
+                <span class="demo-tab-copy"><strong>Prostor Studio</strong><small>Webdesign &amp; vývoj</small><em>Živý web</em></span>
+                <img class="demo-tab-swatch" src="assets/demos/prostor-favicon.svg" alt="" aria-hidden="true" width="60" height="60">
+              </button>
+              <button class="demo-tab" type="button" role="tab" id="demoTabPohled" aria-selected="false" aria-controls="demoPanel" tabindex="-1" data-demo="pohled">
+                <span class="demo-tab-index">04</span>
+                <span class="demo-tab-copy"><strong>Pohled</strong><small>Fotografické portfolio</small><em>Živý web</em></span>
+                <img class="demo-tab-swatch" src="demos/pohled/assets/favicon.svg" alt="" aria-hidden="true" width="60" height="60">
+              </button>
+            </div>
+
+            <p class="demo-tabs-note"><span aria-hidden="true">✦</span> Všechny weby jsou ilustrační.</p>
+          </div>
+
+          <div class="demo-stage" data-demo-stage>
+            <div class="demo-stage-glow" aria-hidden="true"></div>
+            <div class="demo-stage-top">
+              <span class="demo-live"><i aria-hidden="true"></i> <span data-demo-live>Živý náhled</span></span>
+              <span class="demo-stage-counter"><span data-demo-index>01</span><i>/</i>04</span>
+            </div>
+
+            <div class="demo-browser" data-demo-browser>
+              <div class="demo-browser-bar">
+                <img class="demo-browser-favicon" src="" alt="" aria-hidden="true" width="16" height="16">
+                <span class="demo-browser-url"><span data-demo-url>zrnko.cz</span></span>
+                <span class="demo-browser-tag" data-demo-tag>Živý web</span>
+              </div>
+
+              <div class="demo-viewport" id="demoPanel" role="tabpanel" aria-labelledby="demoTabZrnko" tabindex="0">
+                <figure class="demo-shot is-active" data-demo-panel="zrnko" aria-hidden="false">
+                  <picture>
+                    <source media="(max-width: 720px)" srcset="assets/demos/zrnko-preview-720.webp?v=20261107a">
+                    <img src="assets/demos/zrnko-preview.webp?v=20261107a" alt="Náhled e-shopu Zrnko s tmavou navigací, fotografií kávy a nabídkou čerstvě pražených zrn" width="1440" height="936" loading="lazy" decoding="async">
+                  </picture>
+                  <figcaption class="demo-shot-badge"><span aria-hidden="true"></span> Živý web</figcaption>
+                </figure>
+
+                <figure class="demo-shot" data-demo-panel="lentilka" aria-hidden="true">
+                  <picture>
+                    <source media="(max-width: 720px)" srcset="assets/demos/lentilka-preview-720.webp?v=20261108a">
+                    <img src="assets/demos/lentilka-preview.webp?v=20261108a" alt="Náhled školky Lentilka se světlým hravým designem, ilustrací domu se zahradou a nabídkou zápisu" width="1440" height="936" loading="lazy" decoding="async">
+                  </picture>
+                  <figcaption class="demo-shot-badge"><span aria-hidden="true"></span> Živý web</figcaption>
+                </figure>
+
+                <figure class="demo-shot" data-demo-panel="prostor" aria-hidden="true">
+                  <picture>
+                    <source media="(max-width: 720px)" srcset="assets/demos/prostor-preview-720.webp?v=20261107a">
+                    <img src="assets/demos/prostor-preview.webp?v=20261107a" alt="Náhled digitální agentury Prostor Studio s plátnem Three.js a pěti zónami" width="1440" height="936" loading="lazy" decoding="async">
+                  </picture>
+                  <figcaption class="demo-shot-badge"><span aria-hidden="true"></span> Živý web</figcaption>
+                </figure>
+
+                <figure class="demo-shot" data-demo-panel="pohled" aria-hidden="true">
+                  <picture>
+                    <source media="(max-width: 720px)" srcset="assets/demos/pohled-preview-720.webp?v=20261108b">
+                    <img src="assets/demos/pohled-preview.webp?v=20261108b" alt="Náhled černobílého fotografického portfolia Pohled s velkými snímky" width="1440" height="936" loading="lazy" decoding="async">
+                  </picture>
+                  <figcaption class="demo-shot-badge"><span aria-hidden="true"></span> Živý web</figcaption>
+                </figure>
+
+              </div>
+
+              <span class="demo-browser-hint" aria-hidden="true">Klikněte pro otevření</span>
+              <span class="demo-browser-shine" aria-hidden="true"></span>
+            </div>
+
+            <div class="demo-stage-foot">
+              <div class="demo-stage-copy">
+                <p class="demo-stage-kicker" data-demo-kicker>Pražírna &amp; e-shop</p>
+                <p class="demo-stage-desc" data-demo-desc>Opravdový e-shop s katalogem káv, košíkem, vyhledáváním i demo pokladnou. Otevřete ho přímo tady a projděte celý.</p>
+              </div>
+              <button class="btn btn--demo js-demo-open" type="button" data-demo="zrnko">
+                <span data-demo-open-label>Otevřít celý web</span>
+                <span class="btn-icon"><svg viewBox="0 0 24 24" aria-hidden="true"><use href="#icon-arrow-up"/></svg></span>
+              </button>
+            </div>
+          </div>
+        </div>
+
+        <p class="demo-note" data-reveal><span aria-hidden="true">✦</span> Žádné odcházení ze stránky. Živý web se načte až po otevření, takže zbytek stránky zůstává rychlý. Vše jde ovládat i klávesnicí.</p>
+      </div>
+    </section>
+
+
+    <section class="section process" id="proces" aria-labelledby="process-title">
+      <div class="process-citrus" aria-hidden="true"><svg viewBox="0 0 40 40"><use href="#icon-citrus"/></svg></div>
+      <div class="process-object process-object--orb" aria-hidden="true"></div>
+      <div class="process-object process-object--ring" aria-hidden="true"></div>
+      <div class="container">
+        <div class="section-head section-head--dark">
+          <p class="section-label section-label--light" data-reveal><span>04</span> Jak pracujeme</p>
+          <div class="section-head-row">
+            <h2 id="process-title" data-reveal data-reveal-delay=".06s">Od prvního ahoj<br>po <em>spuštění.</em></h2>
+            <p class="section-intro" data-reveal data-reveal-delay=".12s">Žádný chaos, žádné týdny ticha. Víte, co se děje, co bude následovat a kdy se váš web objeví ve světě.</p>
+          </div>
+        </div>
+
+        <div class="steps">
+          <article class="step" data-reveal>
+            <span class="step-number">01</span>
+            <span class="step-time">Den 1</span>
+            <h3>Poznáme se</h3>
+            <p>Půlhodinový telefonát bez žargonu. Zjistíme, co váš podnik potřebuje a co mu naopak může ubrat.</p>
+          </article>
+          <article class="step" data-reveal data-reveal-delay=".08s">
+            <span class="step-number">02</span>
+            <span class="step-time">Týden 1–2</span>
+            <h3>Dostane to tvar</h3>
+            <p>Připravíme strukturu a design, který sedne vaší značce. Nic nevyrobíme dopředu bez vašeho palate.</p>
+          </article>
+          <article class="step" data-reveal data-reveal-delay=".16s">
+            <span class="step-number">03</span>
+            <span class="step-time">Týden 2–5</span>
+            <h3>Naprogramujeme</h3>
+            <p>Web složíme, otestujeme na mobilech i počítačích a doladíme každý detail. Včetně těch, které nevidíte.</p>
+          </article>
+          <article class="step" data-reveal data-reveal-delay=".24s">
+            <span class="step-number">04</span>
+            <span class="step-time">Den D + dál</span>
+            <h3>Spustíme</h3>
+            <p>Předáme vám web i krátké školení. A zůstaneme na dosah, když budete chtít upravit text nebo přidat stránku.</p>
+          </article>
+        </div>
+
+        <div class="process-note" data-reveal>
+          <div class="process-note-mark"><svg viewBox="0 0 24 24" aria-hidden="true"><use href="#icon-spark"/></svg></div>
+          <p><strong>Nebojte, žádná technická zkouška.</strong> První call je 30 minut a můžete přijít jen s nápadem. Zbytek vymyslíme spolu.</p>
+          <a class="btn btn--outline-light" href="#kontakt">
+            <span>Domluvit telefonát</span>
+            <span class="btn-icon"><svg viewBox="0 0 24 24" aria-hidden="true"><use href="#icon-arrow-up"/></svg></span>
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <section class="section pricing" id="cenik" aria-labelledby="pricing-title">
+      <div class="container">
+        <div class="pricing-grid">
+          <div class="pricing-intro">
+            <p class="section-label" data-reveal><span>05</span> Ceník</p>
+            <h2 id="pricing-title" data-reveal data-reveal-delay=".06s">Jasné ceny.<br>Žádné <em>hádání.</em></h2>
+            <p data-reveal data-reveal-delay=".12s">Každý projekt je jiný, proto tady najdete orientační startovní ceny. Po krátkém telfonátu dostanete jasnou nabídku s pevnou cenou, rozsahem a termínem.</p>
+            <div class="pricing-includes" data-reveal data-reveal-delay=".18s">
+              <p class="pricing-includes-title">V ceně vždy</p>
+              <ul>
+                <li><svg viewBox="0 0 24 24" aria-hidden="true"><use href="#icon-check"/></svg> Responzivní design</li>
+                <li><svg viewBox="0 0 24 24" aria-hidden="true"><use href="#icon-check"/></svg> Základní SEO</li>
+                <li><svg viewBox="0 0 24 24" aria-hidden="true"><use href="#icon-check"/></svg> Analytika</li>
+                <li><svg viewBox="0 0 24 24" aria-hidden="true"><use href="#icon-check"/></svg> Zaškolení</li>
+              </ul>
+            </div>
+          </div>
+
+          <div class="price-list" data-reveal data-reveal-delay=".1s">
+            <a class="price-row" href="#kontakt" data-service="web">
+              <span class="price-name"><strong>Drobný web</strong><small>Jednostránka, která představí službu nebo produkt.</small></span>
+              <span class="price-amount">od 1 000 Kč</span>
+              <span class="price-arrow"><svg viewBox="0 0 24 24" aria-hidden="true"><use href="#icon-arrow-up"/></svg></span>
+            </a>
+            <a class="price-row" href="#kontakt" data-service="web">
+              <span class="price-name"><strong>Firemní web</strong><small>Několik stránek, správa obsahu a prostor pro růst.</small></span>
+              <span class="price-amount">od 2 8000 Kč</span>
+              <span class="price-arrow"><svg viewBox="0 0 24 24" aria-hidden="true"><use href="#icon-arrow-up"/></svg></span>
+            </a>
+            <a class="price-row" href="#kontakt" data-service="eshop">
+              <span class="price-name"><strong>E-shop &amp; rezervace</strong><small>Prodávejte, přijímejte objednávky nebo rezervace.</small></span>
+              <span class="price-amount">od 3 8000 Kč</span>
+              <span class="price-arrow"><svg viewBox="0 0 24 24" aria-hidden="true"><use href="#icon-arrow-up"/></svg></span>
+            </a>
+            <a class="price-row" href="#kontakt" data-service="care">
+              <span class="price-name"><strong>Péče o web</strong><small>Úpravy, zálohy, bezpečnost a klid na vaši práci.</small></span>
+              <span class="price-amount">od 200 Kč / měs.</span>
+              <span class="price-arrow"><svg viewBox="0 0 24 24" aria-hidden="true"><use href="#icon-arrow-up"/></svg></span>
+            </a>
+            <p class="price-note">Ceny jsou orientační, bez DPH. Finální nabídku dostanete vždy předem a písemně.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section faq" id="faq" aria-labelledby="faq-title">
+      <div class="container">
+        <div class="faq-grid">
+          <div class="faq-intro">
+            <p class="section-label" data-reveal><span>06</span> Časté otázky</p>
+            <h2 id="faq-title" data-reveal data-reveal-delay=".06s">Ještě něco<br>na <em>srdci?</em></h2>
+            <p data-reveal data-reveal-delay=".12s">Tady jsou odpovědi na to, na co se nás lidé ptají nejčastěji. A pokud tam vaše otázka není, prostě napište.</p>
+            <a class="text-link" href="#kontakt" data-reveal data-reveal-delay=".18s"><span>Zeptat se jinak</span><svg viewBox="0 0 24 24" aria-hidden="true"><use href="#icon-arrow-right"/></svg></a>
+          </div>
+
+          <div class="faq-list" data-reveal>
+            <details open>
+              <summary><span>Kolik mě web bude stát?</span><span class="faq-plus" aria-hidden="true"></span></summary>
+              <div class="faq-answer"><p>Orientační ceny najdete výše. Každý projekt je jiný, proto po krátkém telefonátu dostanete nabídku s pevnou cenou. Žádná překvapení na faktuře.</p></div>
+            </details>
+            <details>
+              <summary><span>Jak dlouho výroba webu trvá?</span><span class="faq-plus" aria-hidden="true"></span></summary>
+              <div class="faq-answer"><p>Jednoduchý web obvykle 2–3 týdny, větší firemní web 4–6 týdnů. E-shop nebo rezervační systém podle rozsahu. Termín potvrdíme hned na začátku.</p></div>
+            </details>
+            <details>
+              <summary><span>Budu si web umět spravovat sám?</span><span class="faq-plus" aria-hidden="true"></span></summary>
+              <div class="faq-answer"><p>Ano. Součástí předání je jednoduchá administrace a krátké zaškolení. Texty, fotky i nové produkty tak zvládnete měnit bez programátora.</p></div>
+            </details>
+            <details>
+              <summary><span>Přebíráte i existující weby?</span><span class="faq-plus" aria-hidden="true"></span></summary>
+              <div class="faq-answer"><p>Často ano. Nejprve se podíváme, co funguje a co ne. Občas stačí web doladit, jindy dává smysl postavit ho znovu. Upřímně vám řekneme, co doporučujeme.</p></div>
+            </details>
+            <details>
+              <summary><span>Co ode mě budete potřebovat?</span><span class="faq-plus" aria-hidden="true"></span></summary>
+              <div class="faq-answer"><p>Hlavně 30 minut na úvodní telefonát, představu o vašem podnikání a případně logo nebo fotky. Zbytek postupně doladíme — nemusíte mít nic připravené.</p></div>
+            </details>
+            <details>
+              <summary><span>Kde bude web hostovaný?</span><span class="faq-plus" aria-hidden="true"></span></summary>
+              <div class="faq-answer"><p>Pomůžeme vybrat spolehlivý hosting i doménu. Můžeme převzít technickou správu, nebo vám předáme všechny přístupy. Je to vždy na vás.</p></div>
+            </details>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="contact" id="kontakt" aria-labelledby="contact-title">
+      <div class="contact-orb contact-orb--one" aria-hidden="true"></div>
+      <div class="contact-orb contact-orb--two" aria-hidden="true"></div>
+      <div class="container contact-grid">
+        <div class="contact-copy">
+          <p class="section-label section-label--light" data-reveal><span>07</span> Pojďme na to</p>
+          <h2 id="contact-title" data-reveal data-reveal-delay=".06s">Máte nápad?<br><em>My máme chuť.</em></h2>
+          <p class="contact-lead" data-reveal data-reveal-delay=".12s">Napište nám pár slov o svém podnikání. Ozveme se do jednoho pracovního dne a společně zjistíme, co dál.</p>
+
+          <div class="contact-details" data-reveal data-reveal-delay=".18s">
+            <a href="mailto:ahoj@pomelostudio.cz" class="contact-detail">
+              <span class="contact-detail-icon"><svg viewBox="0 0 24 24" aria-hidden="true"><use href="#icon-mail"/></svg></span>
+              <span><small>E-mail</small><strong>ahoj@pomelostudio.cz</strong></span>
+            </a>
+            <a href="tel:+420777321654" class="contact-detail">
+              <span class="contact-detail-icon"><svg viewBox="0 0 24 24" aria-hidden="true"><use href="#icon-phone"/></svg></span>
+              <span><small>Telefon</small><strong>+420 777 321 654</strong></span>
+            </a>
+            <div class="contact-detail">
+              <span class="contact-detail-icon"><svg viewBox="0 0 24 24" aria-hidden="true"><use href="#icon-pin"/></svg></span>
+              <span><small>Kde jsme</small><strong>Brno &amp; online po celé ČR</strong></span>
+            </div>
+          </div>
+
+          <div class="availability" data-reveal data-reveal-delay=".24s">
+            <span class="availability-dot" aria-hidden="true"></span>
+            <span><strong>Momentálně přijímáme nové projekty.</strong> První konzultace je zdarma.</span>
+          </div>
+        </div>
+
+        <div class="form-card" data-reveal data-reveal-delay=".16s">
+          <div class="form-heading">
+            <p class="form-kicker">Nezávazná poptávka</p>
+            <h3>Povězte nám o svém projektu.</h3>
+            <p>Stačí pár vět. Zbytek probereme spolu.</p>
+          </div>
+
+          <form class="contact-form" id="contactForm" novalidate>
+            <div class="form-row">
+              <div class="form-field">
+                <label for="name">Vaše jméno <span>*</span></label>
+                <input id="name" name="name" type="text" autocomplete="name" placeholder="Jana Nováková" required aria-describedby="nameError">
+                <span class="field-error" id="nameError" aria-live="polite"></span>
+              </div>
+              <div class="form-field">
+                <label for="email">E-mail <span>*</span></label>
+                <input id="email" name="email" type="email" autocomplete="email" placeholder="jana@firma.cz" required aria-describedby="emailError">
+                <span class="field-error" id="emailError" aria-live="polite"></span>
+              </div>
+            </div>
+
+            <div class="form-row">
+              <div class="form-field">
+                <label for="company">Firma <span class="optional">(nepovinné)</span></label>
+                <input id="company" name="company" type="text" autocomplete="organization" placeholder="Název vaší firmy">
+              </div>
+              <div class="form-field">
+                <label for="service">Co potřebujete? <span>*</span></label>
+                <div class="select-wrap">
+                  <select id="service" name="service" required aria-describedby="serviceError">
+                    <option value="web">Web na míru</option>
+                    <option value="eshop">E-shop</option>
+                    <option value="app">Rezervace / systém</option>
+                    <option value="care">Péče o web</option>
+                    <option value="other">Ještě nevím</option>
+                  </select>
+                  <svg viewBox="0 0 24 24" aria-hidden="true"><use href="#icon-arrow-down"/></svg>
+                </div>
+                <span class="field-error" id="serviceError" aria-live="polite"></span>
+              </div>
+            </div>
+
+            <div class="form-field">
+              <label for="budget">Orientační rozpočet <span class="optional">(nepovinné)</span></label>
+              <div class="select-wrap">
+                <select id="budget" name="budget">
+                  <option value="">Nevím / poradíte mi</option>
+                  <option value="do 20 000 Kč">do 20 000 Kč</option>
+                  <option value="20 000–40 000 Kč">20 000–40 000 Kč</option>
+                  <option value="40 000–80 000 Kč">40 000–80 000 Kč</option>
+                  <option value="80 000 Kč a více">80 000 Kč a více</option>
+                </select>
+                <svg viewBox="0 0 24 24" aria-hidden="true"><use href="#icon-arrow-down"/></svg>
+              </div>
+            </div>
+
+            <div class="form-field">
+              <label for="message">Pár slov o projektu <span>*</span></label>
+              <textarea id="message" name="message" rows="4" placeholder="Co děláte, komu prodáváte a co by měl nový web umět?" required aria-describedby="messageError"></textarea>
+              <span class="field-error" id="messageError" aria-live="polite"></span>
+            </div>
+
+            <div class="form-field form-field--honey" aria-hidden="true">
+              <label for="company_website">Web</label>
+              <input id="company_website" name="company_website" type="text" tabindex="-1" autocomplete="off">
+            </div>
+
+            <label class="form-consent">
+              <input type="checkbox" name="consent" id="consent" required aria-describedby="consentError">
+              <span>Souhlasím se zpracováním údajů pro účely odpovědi na poptávku podle <a href="privacy.html">zásad ochrany osobních údajů</a>. Nic nespamujeme.</span>
+            </label>
+            <span class="field-error field-error--consent" id="consentError" aria-live="polite"></span>
+
+            <button class="btn btn--primary btn--submit" type="submit" data-submit-button>
+              <span data-submit-label>Poslat poptávku</span>
+              <span class="btn-icon"><svg viewBox="0 0 24 24" aria-hidden="true"><use href="#icon-arrow-up"/></svg></span>
+            </button>
+            <p class="form-note" role="status" aria-live="polite" data-form-status>Ozveme se do jednoho pracovního dne. Slibujeme.</p>
+          </form>
+
+          <div class="form-success" data-form-success hidden>
+            <span class="form-success-icon"><svg viewBox="0 0 24 24" aria-hidden="true"><use href="#icon-check"/></svg></span>
+            <p class="form-kicker">Odesláno</p>
+            <h3 data-success-heading>Máme to!</h3>
+            <p data-success-text>Díky za poptávku. Ozveme se co nejdřív, obvykle do jednoho pracovního dne.</p>
+            <button class="btn btn--ghost" type="button" data-form-reset>
+              <span>Poslat další zprávu</span>
+              <span class="btn-icon"><svg viewBox="0 0 24 24" aria-hidden="true"><use href="#icon-arrow-right"/></svg></span>
+            </button>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container">
+      <div class="footer-top">
+        <div class="footer-brand">
+          <a class="brand brand--light" href="#top" aria-label="Pomelo studio, zpět nahoru">
+            <svg class="brand-mark" viewBox="0 0 40 40" aria-hidden="true"><use href="#icon-citrus"/></svg>
+            <span class="brand-name">pomelo<span class="brand-sub">studio</span></span>
+          </a>
+          <p>Malé studio. Velká péče.<br>Weby, které mají šťávu.</p>
+          <a class="footer-mail" href="mailto:ahoj@pomelostudio.cz">ahoj@pomelostudio.cz</a>
+        </div>
+
+        <nav class="footer-nav" aria-label="Patička — navigace">
+          <div>
+            <p class="footer-heading">Studio</p>
+            <a href="#studio">O nás</a>
+            <a href="#ukazky">Ukázky</a>
+            <a href="#proces">Proces</a>
+            <a href="#faq">Otázky</a>
+          </div>
+          <div>
+            <p class="footer-heading">Služby</p>
+            <a href="#sluzby">Weby na míru</a>
+            <a href="#sluzby">E-shopy</a>
+            <a href="#sluzby">Rezervace</a>
+            <a href="#sluzby">Péče o web</a>
+          </div>
+          <div>
+            <p class="footer-heading">Kontakt</p>
+            <a href="mailto:ahoj@pomelostudio.cz">Napište nám</a>
+            <a href="tel:+420777321654">+420 777 321 654</a>
+            <a href="#cenik">Ceník</a>
+            <a href="#kontakt">Nezávazná poptávka</a>
+          </div>
+        </nav>
+      </div>
+
+      <div class="footer-bottom">
+        <p>© <span data-current-year>2026</span> Pomelo studio. Vytvořeno s láskou a citrusy.</p>
+        <p><a class="footer-legal" href="privacy.html">Ochrana osobních údajů</a></p>
+        <a class="back-to-top" href="#top" aria-label="Zpět nahoru">
+          <svg viewBox="0 0 24 24" aria-hidden="true"><use href="#icon-arrow-up"/></svg>
+          <span>Nahoru</span>
+        </a>
+      </div>
+    </div>
+  </footer>
+
+  <dialog class="case-modal" id="caseModal" aria-labelledby="caseModalTitle">
+    <div class="case-modal-shell">
+      <div class="case-modal-top">
+        <span class="case-modal-label">Vybraný projekt</span>
+        <button class="modal-close" type="button" aria-label="Zavřít případovou studii" data-modal-close>
+          <svg viewBox="0 0 24 24" aria-hidden="true"><use href="#icon-close"/></svg>
+        </button>
+      </div>
+      <div class="case-modal-grid">
+        <div class="case-modal-art" id="caseModalArt" aria-hidden="true"></div>
+        <div class="case-modal-content">
+          <p class="work-meta" id="caseModalMeta"></p>
+          <h2 id="caseModalTitle"></h2>
+          <p class="case-modal-lead" id="caseModalLead"></p>
+          <div class="case-modal-services" id="caseModalServices"></div>
+          <div class="case-modal-body" id="caseModalBody"></div>
+          <a class="btn btn--primary" href="#kontakt" data-modal-contact>
+            <span>Chci podobný web</span>
+            <span class="btn-icon"><svg viewBox="0 0 24 24" aria-hidden="true"><use href="#icon-arrow-up"/></svg></span>
+          </a>
+        </div>
+      </div>
+    </div>
+  </dialog>
+
+  <dialog class="demo-modal" id="demoModal" aria-labelledby="demoModalTitle" aria-describedby="demoModalDesc">
+    <div class="demo-modal-shell">
+      <header class="demo-modal-top">
+        <div class="demo-modal-meta" aria-live="polite">
+          <span class="demo-modal-kicker">Otevřený náhled <span data-demo-modal-index>01</span> / 04 <b data-demo-modal-tag>Živý web</b></span>
+          <strong id="demoModalTitle">Zrnko</strong>
+        </div>
+        <div class="demo-modal-tools">
+          <button class="demo-modal-arrow" type="button" data-demo-prev aria-label="Předchozí ukázka">
+            <svg viewBox="0 0 24 24" aria-hidden="true"><use href="#icon-arrow-right"/></svg>
+          </button>
+          <button class="demo-modal-arrow" type="button" data-demo-next aria-label="Další ukázka">
+            <svg viewBox="0 0 24 24" aria-hidden="true"><use href="#icon-arrow-right"/></svg>
+          </button>
+          <button class="modal-close demo-modal-close" type="button" aria-label="Zavřít zvětšený náhled" data-demo-close>
+            <svg viewBox="0 0 24 24" aria-hidden="true"><use href="#icon-close"/></svg>
+          </button>
+        </div>
+      </header>
+
+      <div class="demo-modal-body">
+        <div class="demo-modal-browser">
+          <div class="demo-browser-bar">
+            <img class="demo-browser-favicon" src="" alt="" aria-hidden="true" width="16" height="16">
+            <span class="demo-browser-url"><span data-demo-modal-url>zrnko.cz</span></span>
+            <span class="demo-browser-tag" data-demo-modal-bar-tag>Živý web</span>
+          </div>
+          <div class="demo-modal-viewport" id="demoModalViewport" data-demo-modal-viewport role="group" aria-label="Interaktivní náhled vybraného ukázkového webu"></div>
+          <div class="demo-modal-loading" data-demo-modal-loading hidden>
+            <span class="demo-modal-spinner" aria-hidden="true"></span>
+            <p>Načítám živý web…</p>
+          </div>
+        </div>
+
+        <div class="demo-modal-foot">
+          <div class="demo-modal-copy">
+            <p class="demo-modal-tag" data-demo-modal-kicker>Pekárna &amp; kavárna</p>
+            <p class="demo-modal-desc" id="demoModalDesc" data-demo-modal-desc>Živý e-shop s katalogem, košíkem, vyhledáváním a demo pokladnou. Projděte ho celý přímo v náhledu.</p>
+          </div>
+          <a class="btn btn--light demo-modal-cta" href="#kontakt" data-demo-contact>
+            <span>Chci podobný web</span>
+            <span class="btn-icon"><svg viewBox="0 0 24 24" aria-hidden="true"><use href="#icon-arrow-up"/></svg></span>
+          </a>
+        </div>
+      </div>
+    </div>
+  </dialog>
+
+  <noscript>
+    <div class="noscript">JavaScript je vypnutý, ale to nevadí. Napište nám přímo na <a href="mailto:ahoj@pomelostudio.cz">ahoj@pomelostudio.cz</a>.</div>
+  </noscript>
+</body>
+</html>
+

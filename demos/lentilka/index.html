@@ -1,0 +1,863 @@
+<!DOCTYPE html>
+<html lang="cs">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Lentilka — školka, kde se dětství nezrychlí</title>
+  <meta name="description" content="Malá školka a dětská skupina v Praze 6 pro děti od 2 do 6 let. Velká zahrada, malé třídy, domácí jídlo a dost času na hru.">
+  <meta name="theme-color" content="#FFF9EC">
+  <meta property="og:title" content="Lentilka — školka, kde se dětství nezrychlí">
+  <meta property="og:description" content="Malá školka s velkým dvorem. Pro děti od 2 do 6 let, v Praze 6.">
+  <meta property="og:type" content="website">
+  <meta name="robots" content="noindex, nofollow">
+  <link rel="icon" href="assets/favicon.svg" type="image/svg+xml">
+  <link rel="preload" href="/assets/fonts/fredoka-latin.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="preload" href="/assets/fonts/fredoka-latin-ext.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="preload" href="/assets/fonts/nunito-latin.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="preload" href="/assets/fonts/nunito-latin-ext.woff2" as="font" type="font/woff2" crossorigin>
+  <script src="js/boot.js?v=20261108b"></script>
+  <link rel="stylesheet" href="css/main.css?v=20261108b">
+</head>
+<body>
+  <a class="skip" href="#main">Přeskočit na obsah</a>
+
+  <svg class="svg-sprite" aria-hidden="true">
+    <symbol id="i-arrow" viewBox="0 0 24 24"><path d="M4 12h15M13 5l7 7-7 7"/></symbol>
+    <symbol id="i-arrow-left" viewBox="0 0 24 24"><path d="M20 12H5M11 5l-7 7 7 7"/></symbol>
+    <symbol id="i-check" viewBox="0 0 24 24"><path d="m4 12 5 5L20 6"/></symbol>
+    <symbol id="i-close" viewBox="0 0 24 24"><path d="m6 6 12 12M18 6 6 18"/></symbol>
+    <symbol id="i-menu" viewBox="0 0 24 24"><path d="M4 7h16M4 12h16M4 17h16"/></symbol>
+    <symbol id="i-sun" viewBox="0 0 24 24"><circle cx="12" cy="12" r="4"/><path d="M12 2v3M12 19v3M2 12h3M19 12h3M4.9 4.9 7 7M17 17l2.1 2.1M19.1 4.9 17 7M7 17l-2.1 2.1"/></symbol>
+    <symbol id="i-leaf" viewBox="0 0 24 24"><path d="M5 19c0-8 5-13 14-14 0 9-5 14-14 14Z"/><path d="M5 19c3-3 5-6 7-10"/></symbol>
+    <symbol id="i-pot" viewBox="0 0 24 24"><path d="M4 9h16l-1.5 10h-13L4 9Z"/><path d="M8 9V7a4 4 0 0 1 8 0v2M3 6h18"/></symbol>
+    <symbol id="i-heart" viewBox="0 0 24 24"><path d="M12 20s-8-4.6-8-10a4.5 4.5 0 0 1 8-2.8A4.5 4.5 0 0 1 20 10c0 5.4-8 10-8 10Z"/></symbol>
+    <symbol id="i-clock" viewBox="0 0 24 24"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 2"/></symbol>
+    <symbol id="i-mail" viewBox="0 0 24 24"><rect x="3" y="5" width="18" height="14" rx="3"/><path d="m4 7 8 6 8-6"/></symbol>
+    <symbol id="i-phone" viewBox="0 0 24 24"><path d="M7 3h3l1.5 4-2 1.5a14 14 0 0 0 6 6L17 12.5l4 1.5v3a2 2 0 0 1-2 2A16 16 0 0 1 5 5a2 2 0 0 1 2-2Z"/></symbol>
+    <symbol id="i-pin" viewBox="0 0 24 24"><path d="M20 10c0 5-8 11-8 11S4 15 4 10a8 8 0 1 1 16 0Z"/><circle cx="12" cy="10" r="3"/></symbol>
+    <symbol id="i-calendar" viewBox="0 0 24 24"><rect x="3" y="5" width="18" height="16" rx="3"/><path d="M8 3v4M16 3v4M3 10h18"/></symbol>
+    <symbol id="i-users" viewBox="0 0 24 24"><circle cx="9" cy="8" r="3.5"/><path d="M2.5 20c0-3.5 2.9-5.5 6.5-5.5s6.5 2 6.5 5.5"/><path d="M16 5.5a3.5 3.5 0 0 1 0 7M18 14.8c2.1.5 3.5 2.2 3.5 4.7"/></symbol>
+    <symbol id="i-spark" viewBox="0 0 24 24"><path d="M12 2l2.2 7.8L22 12l-7.8 2.2L12 22l-2.2-7.8L2 12l7.8-2.2L12 2Z"/></symbol>
+    <symbol id="i-lock" viewBox="0 0 24 24"><rect x="4" y="10" width="16" height="11" rx="3"/><path d="M8 10V7a4 4 0 0 1 8 0v3M12 14v3"/></symbol>
+    <symbol id="i-bowl" viewBox="0 0 24 24"><path d="M3 11h18a9 9 0 0 1-18 0Z"/><path d="M7 7c0-1.5 1-2 1-3M12 7c0-1.5 1-2 1-3M17 7c0-1.5 1-2 1-3"/></symbol>
+    <symbol id="i-apple" viewBox="0 0 24 24"><path d="M12 8c-4-2-7 1-7 5s3 8 7 8 7-4 7-8-3-7-7-5Z"/><path d="M12 8c0-3 2-5 4-5M12 5c-1-2-3-2-4-1"/></symbol>
+    <symbol id="i-moon" viewBox="0 0 24 24"><path d="M20 15.5A8.5 8.5 0 0 1 8.5 4 8.5 8.5 0 1 0 20 15.5Z"/></symbol>
+    <symbol id="i-paint" viewBox="0 0 24 24"><path d="M12 3a9 9 0 1 0 0 18c1.7 0 2-1.2 1.2-2.2-.8-1.1-.2-2.8 1.3-2.8H17a4 4 0 0 0 4-4c0-5-4-9-9-9Z"/><circle cx="7.5" cy="10" r="1"/><circle cx="10" cy="6.5" r="1"/><circle cx="15" cy="7" r="1"/><circle cx="17.5" cy="11" r="1"/></symbol>
+    <symbol id="i-weather" viewBox="0 0 24 24"><circle cx="8" cy="8" r="3"/><path d="M8 2v2M2 8h2M3.8 3.8 5.2 5.2M12.2 3.8 10.8 5.2"/><path d="M7 18a4 4 0 0 1 .7-7.9A5 5 0 0 1 17.5 12 3.5 3.5 0 0 1 17 19H7Z"/></symbol>
+    <symbol id="i-chevron" viewBox="0 0 24 24"><path d="m6 9 6 6 6-6"/></symbol>
+  </svg>
+
+  <div class="announcement">
+    <div class="container announcement-inner">
+      <p><span class="announcement-dot" aria-hidden="true"></span> Zápis 2026/27 je otevřený. Ve třídě Soviček máme 3 volná místa.</p>
+      <a href="#zapis">Prohlédnout zápis <svg class="icon" aria-hidden="true"><use href="#i-arrow"/></svg></a>
+    </div>
+  </div>
+
+  <header class="site-head" data-head>
+    <div class="container head-inner">
+      <a class="brand" href="#top" aria-label="Lentilka, zpět na začátek">
+        <span class="brand-mark" aria-hidden="true">
+          <svg viewBox="0 0 64 64">
+            <circle cx="32" cy="32" r="28" fill="#FFD447" stroke="#17324D" stroke-width="4"/>
+            <path d="M32 46V25" fill="none" stroke="#17324D" stroke-width="3.5" stroke-linecap="round"/>
+            <path d="M32 30c-8-1-12-5-12-12 7 0 12 4 12 12Z" fill="#4ECB8D" stroke="#17324D" stroke-width="3.2" stroke-linejoin="round"/>
+            <path d="M32 34c7-1 11-5 11-11-6 0-11 3-11 11Z" fill="#3D7BFF" stroke="#17324D" stroke-width="3.2" stroke-linejoin="round"/>
+            <circle cx="24" cy="38" r="2" fill="#17324D"/>
+            <circle cx="40" cy="38" r="2" fill="#17324D"/>
+            <path d="M26 43c3.6 3 8.4 3 12 0" fill="none" stroke="#17324D" stroke-width="3" stroke-linecap="round"/>
+          </svg>
+        </span>
+        <span class="brand-name">Lentilka<small>školka &amp; jesle</small></span>
+      </a>
+
+      <div class="head-actions">
+        <button class="menu-btn" type="button" data-menu-open aria-expanded="false" aria-controls="mobileMenu" aria-label="Otevřít menu">
+          <svg class="icon" aria-hidden="true"><use href="#i-menu"/></svg>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <div class="mobile-menu" id="mobileMenu" data-mobile-menu role="dialog" aria-modal="true" aria-label="Mobilní navigace" aria-hidden="true" inert>
+    <div class="mobile-menu-top">
+      <span class="mobile-menu-brand">Lentilka</span>
+      <button class="icon-btn" type="button" data-menu-close aria-label="Zavřít menu">
+        <svg class="icon" aria-hidden="true"><use href="#i-close"/></svg>
+      </button>
+    </div>
+    <nav class="mobile-nav" aria-label="Mobilní navigace">
+      <a href="#o-skolicce"><span>01</span> O školce</a>
+      <a href="#tridy"><span>02</span> Třídy</a>
+      <a href="#den"><span>03</span> Náš den</a>
+      <a href="#jidelnicek"><span>04</span> Jídelníček</a>
+      <a href="#zapis"><span>05</span> Zápis</a>
+      <a href="#kontakt"><span>06</span> Kontakt</a>
+    </nav>
+    <div class="mobile-menu-foot">
+      <p>Na Kuthence 12<br>160 00 Praha 6</p>
+      <a href="mailto:ahoj@skolkalentilka.cz">ahoj@skolkalentilka.cz</a>
+    </div>
+  </div>
+
+  <main id="main">
+    <nav class="tab-nav" aria-label="Sekce školky" role="tablist">
+      <button class="tab-btn is-active" role="tab" aria-selected="true" data-tab="top">Úvod</button>
+      <button class="tab-btn" role="tab" aria-selected="false" data-tab="o-skolicce">O školce</button>
+      <button class="tab-btn" role="tab" aria-selected="false" data-tab="tridy">Třídy</button>
+      <button class="tab-btn" role="tab" aria-selected="false" data-tab="den">Náš den</button>
+      <button class="tab-btn" role="tab" aria-selected="false" data-tab="jidelnicek">Jídelníček</button>
+      <button class="tab-btn" role="tab" aria-selected="false" data-tab="zapis">Zápis</button>
+      <button class="tab-btn" role="tab" aria-selected="false" data-tab="faq">Časté otázky</button>
+      <button class="tab-btn" role="tab" aria-selected="false" data-tab="kontakt">Kontakt</button>
+    </nav>
+    <div class="tab-panels">
+      <section class="hero tab-panel is-active" id="top" aria-labelledby="hero-title" role="tabpanel">
+      <div class="hero-dots" aria-hidden="true"></div>
+      <div class="container hero-grid">
+        <div class="hero-copy">
+          <p class="kicker"><span aria-hidden="true"></span> Školka a dětská skupina · Praha 6</p>
+          <h1 id="hero-title">Malá školka s <em>velkým dvorem.</em></h1>
+          <p class="lead">Pro děti od 2 do 6 let. Ráno začínáme v klidu, odpoledne končíme s blátem na botách. Bez obrazovek a bez spěchu.</p>
+          <div class="hero-actions">
+            <a class="btn btn--primary" href="#zapis">Přihlásit dítě <svg class="icon" aria-hidden="true"><use href="#i-arrow"/></svg></a>
+            <a class="btn btn--soft" href="#kontakt">Přijďte se podívat</a>
+          </div>
+          <ul class="hero-facts" aria-label="Základní informace">
+            <li><strong>7:00–18:00</strong><span>po–pá</span></li>
+            <li><strong>2–6 let</strong><span>věkové rozpětí</span></li>
+            <li><strong>600 m²</strong><span>zahrada</span></li>
+          </ul>
+        </div>
+
+        <div class="hero-art">
+          <div class="hero-scene">
+            <svg class="scene-svg" viewBox="0 0 600 540" role="img" aria-labelledby="sceneTitle sceneDesc">
+              <title id="sceneTitle">Ilustrace školky Lentilka</title>
+              <desc id="sceneDesc">Dům se zahradou, slunce, strom a tři děti, které si hrají před školkou.</desc>
+              <defs>
+                <clipPath id="sceneClip"><rect x="8" y="8" width="584" height="524" rx="42"/></clipPath>
+              </defs>
+              <g clip-path="url(#sceneClip)">
+                <rect x="8" y="8" width="584" height="524" fill="#D8E6FF"/>
+                <circle cx="90" cy="76" r="7" fill="#FFF9EC" opacity=".72"/>
+                <circle cx="132" cy="52" r="4" fill="#FFF9EC" opacity=".72"/>
+                <circle cx="342" cy="62" r="5" fill="#FFF9EC" opacity=".72"/>
+                <circle cx="410" cy="120" r="4" fill="#FFF9EC" opacity=".72"/>
+
+                <g transform="translate(486 102)">
+                  <path d="M0-72v-14M0 72v14M-72 0h-14M72 0h14M-51-51l-10-10M51 51l10 10M51-51l10-10M-51 51l-10 10" fill="none" stroke="#17324D" stroke-width="4" stroke-linecap="round"/>
+                  <circle r="50" fill="#FFD447" stroke="#17324D" stroke-width="4"/>
+                  <circle cx="-15" cy="-6" r="3.2" fill="#17324D"/>
+                  <circle cx="15" cy="-6" r="3.2" fill="#17324D"/>
+                  <path d="M-12 12c7 7 17 7 24 0" fill="none" stroke="#17324D" stroke-width="4" stroke-linecap="round"/>
+                </g>
+
+                <path d="M82 154c8-18 30-22 43-9 5-17 29-21 39-6 13-3 25 7 24 20H75c-2-5 1-10 7-12Z" fill="#FFFDF8" stroke="#17324D" stroke-width="4" stroke-linejoin="round"/>
+                <path d="M330 154c6-14 24-18 34-8 5-13 23-16 31-4 11-2 20 6 19 17H325c-1-4 1-8 5-10Z" fill="#FFFDF8" stroke="#17324D" stroke-width="4" stroke-linejoin="round"/>
+
+                <path d="M8 382c110-42 212 16 316-8 100-23 176-22 268 8v150H8Z" fill="#4ECB8D" stroke="#17324D" stroke-width="4"/>
+                <path d="M8 438c112-27 208 16 312 0 98-15 172-11 264 10v84H8Z" fill="#69D9A2"/>
+
+                <g>
+                  <rect x="156" y="242" width="288" height="176" rx="18" fill="#FFF9EC" stroke="#17324D" stroke-width="4"/>
+                  <path d="M128 250 300 138l172 112Z" fill="#FF5D5D" stroke="#17324D" stroke-width="4" stroke-linejoin="round"/>
+                  <rect x="330" y="184" width="32" height="58" rx="8" fill="#FF9BC2" stroke="#17324D" stroke-width="4"/>
+                  <rect x="274" y="320" width="52" height="98" rx="12" fill="#3D7BFF" stroke="#17324D" stroke-width="4"/>
+                  <circle cx="314" cy="370" r="4.5" fill="#FFD447"/>
+                  <rect x="184" y="278" width="58" height="56" rx="10" fill="#FFD447" stroke="#17324D" stroke-width="4"/>
+                  <path d="M213 280v52M186 306h54" fill="none" stroke="#17324D" stroke-width="3"/>
+                  <rect x="358" y="278" width="58" height="56" rx="10" fill="#A88BFF" stroke="#17324D" stroke-width="4"/>
+                  <path d="M387 280v52M360 306h54" fill="none" stroke="#17324D" stroke-width="3"/>
+                  <rect x="216" y="352" width="38" height="14" rx="7" fill="#FFD447" stroke="#17324D" stroke-width="3"/>
+                  <path d="M235 344v-9" fill="none" stroke="#17324D" stroke-width="3" stroke-linecap="round"/>
+                </g>
+
+                <g transform="translate(86 292)">
+                  <rect x="-14" y="36" width="28" height="100" rx="12" fill="#B36A4C" stroke="#17324D" stroke-width="4"/>
+                  <circle cx="0" cy="8" r="54" fill="#4ECB8D" stroke="#17324D" stroke-width="4"/>
+                  <circle cx="-34" cy="26" r="30" fill="#6AD9A2" stroke="#17324D" stroke-width="4"/>
+                  <circle cx="35" cy="24" r="31" fill="#37B67C" stroke="#17324D" stroke-width="4"/>
+                  <circle cx="-4" cy="52" r="28" fill="#4ECB8D" stroke="#17324D" stroke-width="4"/>
+                  <circle cx="-19" cy="-12" r="4" fill="#FF5D5D"/>
+                  <circle cx="24" cy="3" r="4" fill="#FFD447"/>
+                </g>
+
+                <g transform="translate(152 380)">
+                  <path d="M-17 54v30M17 54v30" fill="none" stroke="#17324D" stroke-width="5" stroke-linecap="round"/>
+                  <path d="M-31 24c-9 1-15 7-17 15M31 24c9 1 15 7 17 15" fill="none" stroke="#17324D" stroke-width="4" stroke-linecap="round"/>
+                  <rect x="-29" y="8" width="58" height="48" rx="18" fill="#FF5D5D" stroke="#17324D" stroke-width="4"/>
+                  <circle cx="0" cy="-16" r="27" fill="#F3C6A5" stroke="#17324D" stroke-width="4"/>
+                  <path d="M-24-22c3-19 13-25 24-25s21 6 24 25c-8-4-15-5-24-5s-16 1-24 5Z" fill="#17324D"/>
+                  <circle cx="-9" cy="-14" r="2.6" fill="#17324D"/>
+                  <circle cx="9" cy="-14" r="2.6" fill="#17324D"/>
+                  <path d="M-7-4c4 3 10 3 14 0" fill="none" stroke="#17324D" stroke-width="3" stroke-linecap="round"/>
+                </g>
+
+                <g transform="translate(300 390)">
+                  <path d="M-16 52v30M16 52v30" fill="none" stroke="#17324D" stroke-width="5" stroke-linecap="round"/>
+                  <path d="M-30 22c-9 2-14 7-16 15M30 22c9 2 14 7 16 15" fill="none" stroke="#17324D" stroke-width="4" stroke-linecap="round"/>
+                  <rect x="-28" y="6" width="56" height="49" rx="18" fill="#FFD447" stroke="#17324D" stroke-width="4"/>
+                  <circle cx="0" cy="-17" r="27" fill="#D9A57E" stroke="#17324D" stroke-width="4"/>
+                  <path d="M-25-20c2-20 13-27 25-27s23 7 25 27c-4-7-10-11-25-11s-21 4-25 11Z" fill="#7A4A2E"/>
+                  <circle cx="-9" cy="-15" r="2.6" fill="#17324D"/>
+                  <circle cx="9" cy="-15" r="2.6" fill="#17324D"/>
+                  <path d="M-7-5c4 3 10 3 14 0" fill="none" stroke="#17324D" stroke-width="3" stroke-linecap="round"/>
+                </g>
+
+                <g transform="translate(426 392)">
+                  <path d="M-15 50v28M15 50v28" fill="none" stroke="#17324D" stroke-width="5" stroke-linecap="round"/>
+                  <path d="M-29 20c-8 2-12 7-14 14M29 20c8 2 12 7 14 14" fill="none" stroke="#17324D" stroke-width="4" stroke-linecap="round"/>
+                  <rect x="-27" y="5" width="54" height="47" rx="17" fill="#3D7BFF" stroke="#17324D" stroke-width="4"/>
+                  <circle cx="0" cy="-17" r="26" fill="#F3C6A5" stroke="#17324D" stroke-width="4"/>
+                  <path d="M-23-22c1-17 9-25 23-25 10 0 17 4 21 13-8-2-14 1-19 8-6-4-14-4-25 4Z" fill="#17324D"/>
+                  <circle cx="-9" cy="-15" r="2.6" fill="#17324D"/>
+                  <circle cx="9" cy="-15" r="2.6" fill="#17324D"/>
+                  <path d="M-7-5c4 3 10 3 14 0" fill="none" stroke="#17324D" stroke-width="3" stroke-linecap="round"/>
+                </g>
+
+                <g fill="#FFFDF8" stroke="#17324D" stroke-width="3">
+                  <circle cx="112" cy="414" r="7"/>
+                  <circle cx="130" cy="432" r="5"/>
+                  <circle cx="494" cy="428" r="7"/>
+                  <circle cx="475" cy="446" r="5"/>
+                </g>
+                <g fill="none" stroke="#17324D" stroke-width="3" stroke-linecap="round">
+                  <path d="M112 426v16M130 437v14M494 440v15M475 453v14"/>
+                </g>
+                <g fill="#FF9BC2">
+                  <circle cx="112" cy="405" r="7"/>
+                  <circle cx="130" cy="428" r="6"/>
+                  <circle cx="494" cy="420" r="7"/>
+                  <circle cx="475" cy="441" r="6"/>
+                </g>
+
+                <g fill="none" stroke="#17324D" stroke-width="3.4" stroke-linecap="round">
+                  <path d="M238 124c7-7 14-7 21 0M266 130c5-5 10-5 15 0"/>
+                </g>
+              </g>
+              <rect x="8" y="8" width="584" height="524" rx="42" fill="none" stroke="#17324D" stroke-width="4"/>
+            </svg>
+          </div>
+
+          <div class="hero-badge hero-badge--bread">
+            <span class="badge-icon badge-icon--yellow"><svg class="icon" aria-hidden="true"><use href="#i-pot"/></svg></span>
+            <span><strong>Dnes pečeme</strong><small>chleba i buchty</small></span>
+          </div>
+          <div class="hero-badge hero-badge--places">
+            <span class="badge-icon badge-icon--green"><svg class="icon" aria-hidden="true"><use href="#i-spark"/></svg></span>
+            <span><strong>3 volná místa</strong><small>ve třídě Soviček</small></span>
+          </div>
+          <span class="hero-spark hero-spark--one" aria-hidden="true"></span>
+          <span class="hero-spark hero-spark--two" aria-hidden="true"></span>
+        </div>
+      </div>
+    </section>
+
+    <div class="info-strip" aria-label="Co je u nás jinak">
+      <div class="container info-grid">
+        <div class="info-item">
+          <span class="info-icon info-icon--red"><svg class="icon" aria-hidden="true"><use href="#i-sun"/></svg></span>
+          <div><strong>Bez obrazovek</strong><span>Hrajeme si, tvoříme a povídáme.</span></div>
+        </div>
+        <div class="info-item">
+          <span class="info-icon info-icon--green"><svg class="icon" aria-hidden="true"><use href="#i-leaf"/></svg></span>
+          <div><strong>Venku každý den</strong><span>Zahrada, les i louže.</span></div>
+        </div>
+        <div class="info-item">
+          <span class="info-icon info-icon--yellow"><svg class="icon" aria-hidden="true"><use href="#i-pot"/></svg></span>
+          <div><strong>Domácí jídlo</strong><span>Vaříme od základu.</span></div>
+        </div>
+        <div class="info-item">
+          <span class="info-icon info-icon--blue"><svg class="icon" aria-hidden="true"><use href="#i-users"/></svg></span>
+          <div><strong>Malé třídy</strong><span>Nejvýš 12 dětí.</span></div>
+        </div>
+      </div>
+    </div>
+
+    <section class="section about tab-panel" id="o-skolicce" role="tabpanel" aria-labelledby="about-title">
+      <div class="container about-grid">
+        <div class="about-copy reveal">
+          <p class="label"><span>01</span> O školce</p>
+          <h2 id="about-title">Školka, která se vejde <em>do rodiny.</em></h2>
+          <p class="section-intro">Lentilka vznikla z jednoduché potřeby: mít místo, kde si dítě může hrát vlastním tempem a dospělý má čas si toho všimnout. Jsme malý tým, který se zná jménem — s dětmi i s rodiči.</p>
+          <ul class="check-list">
+            <li><svg class="icon" aria-hidden="true"><use href="#i-check"/></svg> Děti bereme jako parťáky, ne jako publikum.</li>
+            <li><svg class="icon" aria-hidden="true"><use href="#i-check"/></svg> Každý den jsme venku, i když trochu mží.</li>
+            <li><svg class="icon" aria-hidden="true"><use href="#i-check"/></svg> Rodiče mají dveře otevřené.</li>
+            <li><svg class="icon" aria-hidden="true"><use href="#i-check"/></svg> Učíme se hlavně prožitkem.</li>
+          </ul>
+          <a class="text-link" href="#tridy">Podívejte se na naše třídy <svg class="icon" aria-hidden="true"><use href="#i-arrow"/></svg></a>
+        </div>
+
+        <div class="bento reveal">
+          <article class="bento-card bento-card--red">
+            <span class="bento-icon"><svg class="icon" aria-hidden="true"><use href="#i-users"/></svg></span>
+            <strong class="bento-number">12</strong>
+            <div><h3>dětí maximálně</h3><p>Na každé dítě je čas. A na každého dospělého děti.</p></div>
+          </article>
+          <article class="bento-card bento-card--blue">
+            <span class="bento-icon"><svg class="icon" aria-hidden="true"><use href="#i-leaf"/></svg></span>
+            <strong class="bento-number">600 m²</strong>
+            <div><h3>zahrady</h3><p>Kopec, záhony, pískoviště a koutek pro bosé nohy.</p></div>
+          </article>
+          <article class="bento-card bento-card--yellow">
+            <span class="bento-icon"><svg class="icon" aria-hidden="true"><use href="#i-clock"/></svg></span>
+            <strong class="bento-number">7–18</strong>
+            <div><h3>každý všední den</h3><p>Ráno se vyspíte, odpoledne stihnete cestu domů.</p></div>
+          </article>
+          <article class="bento-card bento-card--green bento-quote">
+            <svg class="quote-mark" viewBox="0 0 40 32" aria-hidden="true"><path d="M0 32V18C0 7 6 1 17 0v8c-5 1-8 4-8 9h8v15H0Zm23 0V18C23 7 29 1 40 0v8c-5 1-8 4-8 9h8v15H23Z"/></svg>
+            <blockquote>„Dítě, které si může hrát, se učí samo. My mu k tomu držíme prostor.“</blockquote>
+            <p>— Jana, zakladatelka</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="section classes tab-panel" id="tridy" role="tabpanel" aria-labelledby="classes-title">
+      <div class="container">
+        <header class="section-head reveal">
+          <div>
+            <p class="label"><span>02</span> Třídy</p>
+            <h2 id="classes-title">Tři třídy, <em>tři světy.</em></h2>
+          </div>
+          <p class="section-intro">Věkové skupiny držíme malé, aby se každé dítě mohlo zapojit. Kapacity se během roku mění — aktuální stav najdete u každé třídy.</p>
+        </header>
+
+        <div class="class-grid">
+          <article class="class-card reveal">
+            <div class="class-art class-art--red">
+              <svg viewBox="0 0 120 120" aria-hidden="true">
+                <ellipse cx="60" cy="70" rx="36" ry="30" fill="#FF5D5D" stroke="#17324D" stroke-width="4"/>
+                <path d="M60 40c-9 0-16 7-16 16" fill="none" stroke="#17324D" stroke-width="4" stroke-linecap="round"/>
+                <circle cx="46" cy="60" r="4" fill="#17324D"/><circle cx="66" cy="56" r="4" fill="#17324D"/><circle cx="82" cy="68" r="4" fill="#17324D"/>
+                <path d="M49 80c7 6 16 6 23 0" fill="none" stroke="#17324D" stroke-width="4" stroke-linecap="round"/>
+                <path d="M60 40V26M60 26c-8 0-13-4-13-11 8 0 13 4 13 11Zm0 0c8 0 13-4 13-11-8 0-13 4-13 11Z" fill="#4ECB8D" stroke="#17324D" stroke-width="4" stroke-linejoin="round"/>
+              </svg>
+              <span class="class-age">2–3 roky</span>
+            </div>
+            <div class="class-body">
+              <div class="class-top"><h3>Berušky</h3><span class="badge badge--green">1 volné místo</span></div>
+              <p>První krůčky, první kamarádi. Klidné tempo, hodně náruče a bezpečný prostor pro zvykání.</p>
+              <dl class="class-meta">
+                <div><dt>Kapacita</dt><dd>8 dětí</dd></div>
+                <div><dt>Průvodkyně</dt><dd>Míša</dd></div>
+              </dl>
+              <a class="text-link" href="#kontakt">Přijďte se podívat <svg class="icon" aria-hidden="true"><use href="#i-arrow"/></svg></a>
+            </div>
+          </article>
+
+          <article class="class-card reveal">
+            <div class="class-art class-art--blue">
+              <svg viewBox="0 0 120 120" aria-hidden="true">
+                <path d="M60 48c-16-18-36-8-38 10-2 16 12 30 38 42 26-12 40-26 38-42-2-18-22-28-38-10Z" fill="#3D7BFF" stroke="#17324D" stroke-width="4" stroke-linejoin="round"/>
+                <path d="M60 48v52M60 62c-10-2-17-8-20-16M60 62c10-2 17-8 20-16" fill="none" stroke="#17324D" stroke-width="4" stroke-linecap="round"/>
+                <circle cx="43" cy="57" r="4" fill="#FFD447"/><circle cx="77" cy="57" r="4" fill="#FFD447"/>
+                <path d="M60 36V22M60 22c-8 0-13-4-13-11 8 0 13 4 13 11Zm0 0c8 0 13-4 13-11-8 0-13 4-13 11Z" fill="#FF9BC2" stroke="#17324D" stroke-width="4" stroke-linejoin="round"/>
+              </svg>
+              <span class="class-age">3–4 roky</span>
+            </div>
+            <div class="class-body">
+              <div class="class-top"><h3>Motýlci</h3><span class="badge badge--neutral">Obsazeno</span></div>
+              <p>Tvoření, objevování a spousta otázek. Zkoumáme, stavíme, malujeme a učíme se ptát.</p>
+              <dl class="class-meta">
+                <div><dt>Kapacita</dt><dd>10 dětí</dd></div>
+                <div><dt>Průvodkyně</dt><dd>Terka</dd></div>
+              </dl>
+              <a class="text-link" href="#kontakt">Přijďte se podívat <svg class="icon" aria-hidden="true"><use href="#i-arrow"/></svg></a>
+            </div>
+          </article>
+
+          <article class="class-card reveal">
+            <div class="class-art class-art--green">
+              <svg viewBox="0 0 120 120" aria-hidden="true">
+                <path d="M29 54c0-18 14-32 31-32s31 14 31 32c0 10-4 19-11 25l6 23-26-13-26 13 6-23c-7-6-11-15-11-25Z" fill="#4ECB8D" stroke="#17324D" stroke-width="4" stroke-linejoin="round"/>
+                <circle cx="47" cy="52" r="12" fill="#FFFDF8" stroke="#17324D" stroke-width="4"/>
+                <circle cx="73" cy="52" r="12" fill="#FFFDF8" stroke="#17324D" stroke-width="4"/>
+                <circle cx="47" cy="52" r="4" fill="#17324D"/><circle cx="73" cy="52" r="4" fill="#17324D"/>
+                <path d="M60 64l-7 7 7 5 7-5-7-7Z" fill="#FFD447" stroke="#17324D" stroke-width="4" stroke-linejoin="round"/>
+              </svg>
+              <span class="class-age">4–6 let</span>
+            </div>
+            <div class="class-body">
+              <div class="class-top"><h3>Sovičky</h3><span class="badge badge--green">3 volná místa</span></div>
+              <p>Příprava na školu bez tabule a zkoušení. Samostatnost, soustředění a radost z vlastního nápadu.</p>
+              <dl class="class-meta">
+                <div><dt>Kapacita</dt><dd>12 dětí</dd></div>
+                <div><dt>Průvodkyně</dt><dd>Jana</dd></div>
+              </dl>
+              <a class="text-link" href="#kontakt">Přijďte se podívat <svg class="icon" aria-hidden="true"><use href="#i-arrow"/></svg></a>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="section day tab-panel" id="den" role="tabpanel" aria-labelledby="day-title">
+      <div class="container day-grid">
+        <div class="day-copy reveal">
+          <p class="label label--light"><span>03</span> Náš den</p>
+          <h2 id="day-title">Jeden den, <em>žádný spěch.</em></h2>
+          <p class="section-intro">Rytmus dne držíme stejný, ale program přizpůsobujeme dětem i počasí. Klikněte na čas a podívejte se, co se u nás v tu chvíli děje.</p>
+          <div class="day-tabs" role="tablist" aria-label="Průběh dne" aria-orientation="vertical">
+            <button class="day-tab is-active" type="button" role="tab" id="dayTab1" aria-selected="true" aria-controls="dayPanel1" tabindex="0" data-day-tab>
+              <span class="day-time">7:00</span><span>Dobré ráno</span>
+            </button>
+            <button class="day-tab" type="button" role="tab" id="dayTab2" aria-selected="false" aria-controls="dayPanel2" tabindex="-1" data-day-tab>
+              <span class="day-time">8:30</span><span>Sváča</span>
+            </button>
+            <button class="day-tab" type="button" role="tab" id="dayTab3" aria-selected="false" aria-controls="dayPanel3" tabindex="-1" data-day-tab>
+              <span class="day-time">9:30</span><span>Ven!</span>
+            </button>
+            <button class="day-tab" type="button" role="tab" id="dayTab4" aria-selected="false" aria-controls="dayPanel4" tabindex="-1" data-day-tab>
+              <span class="day-time">12:00</span><span>Oběd</span>
+            </button>
+            <button class="day-tab" type="button" role="tab" id="dayTab5" aria-selected="false" aria-controls="dayPanel5" tabindex="-1" data-day-tab>
+              <span class="day-time">13:00</span><span>Klid</span>
+            </button>
+            <button class="day-tab" type="button" role="tab" id="dayTab6" aria-selected="false" aria-controls="dayPanel6" tabindex="-1" data-day-tab>
+              <span class="day-time">15:30</span><span>Odpoledne</span>
+            </button>
+          </div>
+        </div>
+
+        <div class="day-panels reveal">
+          <article class="day-panel is-active" role="tabpanel" id="dayPanel1" aria-labelledby="dayTab1" data-day-panel>
+            <span class="day-panel-icon day-panel-icon--yellow"><svg class="icon" aria-hidden="true"><use href="#i-sun"/></svg></span>
+            <p class="day-panel-time">7:00–8:30</p>
+            <h3>Dobré ráno, Lentilko.</h3>
+            <p>Dveře se otevírají v sedm. Děti přicházejí postupně, staví si, listují knížkami nebo si jen tak povídají s průvodkyní. Nikdo nikam nespěchá.</p>
+            <ul><li>Volná hra a ranní kruh</li><li>Přivítání a společná písnička</li></ul>
+          </article>
+          <article class="day-panel" role="tabpanel" id="dayPanel2" aria-labelledby="dayTab2" data-day-panel hidden>
+            <span class="day-panel-icon day-panel-icon--red"><svg class="icon" aria-hidden="true"><use href="#i-apple"/></svg></span>
+            <p class="day-panel-time">8:30–9:00</p>
+            <h3>Něco dobrého na začátek.</h3>
+            <p>Svačina je u nás malá a čerstvá. Ovoce, domácí pečivo, jogurt nebo zelenina. Děti si samy nalévají vodu a učí se prostírat.</p>
+            <ul><li>Ovoce a zelenina z farmy</li><li>Domácí pečivo a pomazánky</li></ul>
+          </article>
+          <article class="day-panel" role="tabpanel" id="dayPanel3" aria-labelledby="dayTab3" data-day-panel hidden>
+            <span class="day-panel-icon day-panel-icon--green"><svg class="icon" aria-hidden="true"><use href="#i-leaf"/></svg></span>
+            <p class="day-panel-time">9:00–11:30</p>
+            <h3>Ven, za každého počasí.</h3>
+            <p>Zahrada, nedaleký les nebo louže. Učíme se oblékat, pozorovat, přelézat, padat a zase vstávat. Čerstvý vzduch je součást programu, ne odměna.</p>
+            <ul><li>Zahrada a vycházky</li><li>Přírodní tvoření a pozorování</li></ul>
+          </article>
+          <article class="day-panel" role="tabpanel" id="dayPanel4" aria-labelledby="dayTab4" data-day-panel hidden>
+            <span class="day-panel-icon day-panel-icon--yellow"><svg class="icon" aria-hidden="true"><use href="#i-bowl"/></svg></span>
+            <p class="day-panel-time">11:30–12:30</p>
+            <h3>Oběd, který voní.</h3>
+            <p>Vaříme z čerstvých surovin. Vždy je polévka, hlavní jídlo a dostatek zeleniny. Děti si mohou přidat, ale nemusí dojíst. Učíme se poslouchat své tělo.</p>
+            <ul><li>Polévka, hlavní jídlo, zelenina</li><li>Bez polotovarů a zbytečného cukru</li></ul>
+          </article>
+          <article class="day-panel" role="tabpanel" id="dayPanel5" aria-labelledby="dayTab5" data-day-panel hidden>
+            <span class="day-panel-icon day-panel-icon--blue"><svg class="icon" aria-hidden="true"><use href="#i-moon"/></svg></span>
+            <p class="day-panel-time">12:30–14:30</p>
+            <h3>Klid na nabití.</h3>
+            <p>Menší děti spí, větší odpočívají s knížkou nebo klidnou hrou. Nikoho nebudíme a nikoho nenutíme spát. Ticho je vzácná součást dne.</p>
+            <ul><li>Spánek nebo tiché čtení</li><li>Klidné puzzle a kreslení</li></ul>
+          </article>
+          <article class="day-panel" role="tabpanel" id="dayPanel6" aria-labelledby="dayTab6" data-day-panel hidden>
+            <span class="day-panel-icon day-panel-icon--pink"><svg class="icon" aria-hidden="true"><use href="#i-paint"/></svg></span>
+            <p class="day-panel-time">14:30–18:00</p>
+            <h3>Odpoledne patří nápadům.</h3>
+            <p>Odpoledne je prostor pro tvoření, divadlo, vaření nebo práci na zahradě. Děti si vybírají, co je zajímá. Rodiče přicházejí postupně a mají čas si popovídat.</p>
+            <ul><li>Dílny a tvořivé kluby</li><li>Zahrada a volná hra</li></ul>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="section menu tab-panel" id="jidelnicek" role="tabpanel" aria-labelledby="menu-title">
+      <div class="container">
+        <header class="section-head section-head--center reveal">
+          <p class="label"><span>04</span> Jídelníček</p>
+          <h2 id="menu-title">Jídlo, které děti <em>skutečně sní.</em></h2>
+          <p class="section-intro">Vaříme z čerstvých surovin. Každý den máme polévku, hlavní jídlo a dvě svačiny. Alergeny najdete u každého jídla.</p>
+        </header>
+
+        <div class="menu-card reveal">
+          <div class="menu-tabs" role="tablist" aria-label="Jídelníček podle dne">
+            <button class="menu-tab is-active" type="button" role="tab" id="menuTab1" aria-selected="true" aria-controls="menuPanel1" tabindex="0" data-menu-tab>Pondělí</button>
+            <button class="menu-tab" type="button" role="tab" id="menuTab2" aria-selected="false" aria-controls="menuPanel2" tabindex="-1" data-menu-tab>Úterý</button>
+            <button class="menu-tab" type="button" role="tab" id="menuTab3" aria-selected="false" aria-controls="menuPanel3" tabindex="-1" data-menu-tab>Středa</button>
+            <button class="menu-tab" type="button" role="tab" id="menuTab4" aria-selected="false" aria-controls="menuPanel4" tabindex="-1" data-menu-tab>Čtvrtek</button>
+            <button class="menu-tab" type="button" role="tab" id="menuTab5" aria-selected="false" aria-controls="menuPanel5" tabindex="-1" data-menu-tab>Pátek</button>
+          </div>
+
+          <div class="menu-panels">
+            <article class="menu-panel is-active" role="tabpanel" id="menuPanel1" aria-labelledby="menuTab1" data-menu-panel>
+              <div class="menu-panel-head"><h3>Pondělí</h3><span>Ukázkový jídelníček</span></div>
+              <div class="meal-grid">
+                <div class="meal"><span class="meal-time">Svačina</span><h4>Jablko, celozrnný chléb s máslem</h4><p class="allergens">Alergeny: 1, 7</p></div>
+                <div class="meal meal--main"><span class="meal-time">Oběd</span><h4>Hráškový krém, kuřecí plátek, bramborová kaše, okurkový salát</h4><p class="allergens">Alergeny: 1, 7, 9</p></div>
+                <div class="meal"><span class="meal-time">Odpoledne</span><h4>Domácí jogurt s ovocem</h4><p class="allergens">Alergeny: 7</p></div>
+              </div>
+            </article>
+            <article class="menu-panel" role="tabpanel" id="menuPanel2" aria-labelledby="menuTab2" data-menu-panel hidden>
+              <div class="menu-panel-head"><h3>Úterý</h3><span>Ukázkový jídelníček</span></div>
+              <div class="meal-grid">
+                <div class="meal"><span class="meal-time">Svačina</span><h4>Banán, rýžové chlebíčky s tvarohovou pomazánkou</h4><p class="allergens">Alergeny: 7</p></div>
+                <div class="meal meal--main"><span class="meal-time">Oběd</span><h4>Zeleninová polévka, rybí filet, bulgur, mrkvový salát</h4><p class="allergens">Alergeny: 1, 4, 7</p></div>
+                <div class="meal"><span class="meal-time">Odpoledne</span><h4>Kefírová buchta, čaj</h4><p class="allergens">Alergeny: 1, 3, 7</p></div>
+              </div>
+            </article>
+            <article class="menu-panel" role="tabpanel" id="menuPanel3" aria-labelledby="menuTab3" data-menu-panel hidden>
+              <div class="menu-panel-head"><h3>Středa</h3><span>Ukázkový jídelníček</span></div>
+              <div class="meal-grid">
+                <div class="meal"><span class="meal-time">Svačina</span><h4>Hruška, kukuřičné křupky, mrkev</h4><p class="allergens">Alergeny: 1</p></div>
+                <div class="meal meal--main"><span class="meal-time">Oběd</span><h4>Čočková polévka, vepřové výpečky, dušené zelí, brambory</h4><p class="allergens">Alergeny: 1, 9</p></div>
+                <div class="meal"><span class="meal-time">Odpoledne</span><h4>Ovocný salát, celozrnný rohlík</h4><p class="allergens">Alergeny: 1, 7</p></div>
+              </div>
+            </article>
+            <article class="menu-panel" role="tabpanel" id="menuPanel4" aria-labelledby="menuTab4" data-menu-panel hidden>
+              <div class="menu-panel-head"><h3>Čtvrtek</h3><span>Ukázkový jídelníček</span></div>
+              <div class="meal-grid">
+                <div class="meal"><span class="meal-time">Svačina</span><h4>Jablko, jáhlová kaše s kakaem</h4><p class="allergens">Alergeny: 7</p></div>
+                <div class="meal meal--main"><span class="meal-time">Oběd</span><h4>Zeleninový vývar, těstoviny s rajčatovou omáčkou a bazalkou, parmazán</h4><p class="allergens">Alergeny: 1, 7</p></div>
+                <div class="meal"><span class="meal-time">Odpoledne</span><h4>Domácí perník, mléko nebo voda</h4><p class="allergens">Alergeny: 1, 3, 7</p></div>
+              </div>
+            </article>
+            <article class="menu-panel" role="tabpanel" id="menuPanel5" aria-labelledby="menuTab5" data-menu-panel hidden>
+              <div class="menu-panel-head"><h3>Pátek</h3><span>Ukázkový jídelníček</span></div>
+              <div class="meal-grid">
+                <div class="meal"><span class="meal-time">Svačina</span><h4>Mandarinka, celozrnný chléb se sýrem</h4><p class="allergens">Alergeny: 1, 7</p></div>
+                <div class="meal meal--main"><span class="meal-time">Oběd</span><h4>Bramborová polévka, rybí prsty, bramborová kaše, kyselá okurka</h4><p class="allergens">Alergeny: 1, 4, 7</p></div>
+                <div class="meal"><span class="meal-time">Odpoledne</span><h4>Ovocný jogurt, piškoty</h4><p class="allergens">Alergeny: 1, 3, 7</p></div>
+              </div>
+            </article>
+          </div>
+          <p class="menu-note"><svg class="icon" aria-hidden="true"><use href="#i-leaf"/></svg> Pijeme vodu a neslazený čaj. Jídelníček je ukázkový a může se měnit podle sezóny.</p>
+        </div>
+      </div>
+    </section>
+
+    <section class="section enroll tab-panel" id="zapis" role="tabpanel" aria-labelledby="enroll-title">
+      <div class="container enroll-grid">
+        <div class="enroll-copy reveal">
+          <p class="label"><span>05</span> Zápis 2026/27</p>
+          <h2 id="enroll-title">Přihlaste dítě <em>bez papírování.</em></h2>
+          <p class="section-intro">Vyplnění zabere pár minut. Ozveme se do dvou pracovních dnů, projdeme si vaše otázky a domluvíme prohlídku. Rozhodnutí je pak na vás.</p>
+          <ul class="check-list">
+            <li><svg class="icon" aria-hidden="true"><use href="#i-check"/></svg> Bez registrace a bez poplatku za podání.</li>
+            <li><svg class="icon" aria-hidden="true"><use href="#i-check"/></svg> Můžete uvést více preferencí.</li>
+            <li><svg class="icon" aria-hidden="true"><use href="#i-check"/></svg> Ozveme se vám osobně, ne automaticky.</li>
+          </ul>
+          <p class="demo-note"><svg class="icon" aria-hidden="true"><use href="#i-lock"/></svg> Tohle je ukázkový formulář. Data se nikam neodesílají.</p>
+        </div>
+
+        <div class="wizard reveal">
+          <ol class="wizard-steps" aria-label="Průběh přihlášky">
+            <li class="wizard-step-label is-active" data-step-label><span>1</span> Dítě</li>
+            <li class="wizard-step-label" data-step-label><span>2</span> Rodič</li>
+            <li class="wizard-step-label" data-step-label><span>3</span> Nástup</li>
+            <li class="wizard-step-label" data-step-label><span>4</span> Shrnutí</li>
+          </ol>
+
+          <form class="enroll-form" data-enroll-form novalidate>
+            <fieldset class="wizard-step" data-step="1">
+              <legend class="sr-only">Údaje o dítěti</legend>
+              <div class="field">
+                <label for="childName">Jméno dítěte <span>*</span></label>
+                <input id="childName" name="childName" type="text" autocomplete="off" required aria-describedby="childNameError">
+                <span class="field-error" id="childNameError" aria-live="polite"></span>
+              </div>
+              <div class="field">
+                <label for="childBirth">Datum narození <span>*</span></label>
+                <input id="childBirth" name="childBirth" type="date" required aria-describedby="childBirthError">
+                <span class="field-error" id="childBirthError" aria-live="polite"></span>
+              </div>
+              <fieldset class="class-picker">
+                <legend>Kam by mělo chodit? <span>*</span></legend>
+                <div class="class-options">
+                  <label class="class-option">
+                    <input type="radio" name="classChoice" value="Berušky (2–3 roky)" required>
+                    <span><strong>Berušky</strong><small>2–3 roky · 1 místo</small></span>
+                  </label>
+                  <label class="class-option">
+                    <input type="radio" name="classChoice" value="Motýlci (3–4 roky)">
+                    <span><strong>Motýlci</strong><small>3–4 roky · obsazeno</small></span>
+                  </label>
+                  <label class="class-option">
+                    <input type="radio" name="classChoice" value="Sovičky (4–6 let)">
+                    <span><strong>Sovičky</strong><small>4–6 let · 3 místa</small></span>
+                  </label>
+                </div>
+                <span class="field-error" id="classChoiceError" aria-live="polite"></span>
+              </fieldset>
+            </fieldset>
+
+            <fieldset class="wizard-step" data-step="2" hidden>
+              <legend class="sr-only">Kontakt na rodiče</legend>
+              <div class="field">
+                <label for="parentName">Jméno rodiče <span>*</span></label>
+                <input id="parentName" name="parentName" type="text" autocomplete="name" required aria-describedby="parentNameError">
+                <span class="field-error" id="parentNameError" aria-live="polite"></span>
+              </div>
+              <div class="field-row">
+                <div class="field">
+                  <label for="parentEmail">E-mail <span>*</span></label>
+                  <input id="parentEmail" name="parentEmail" type="email" autocomplete="email" required aria-describedby="parentEmailError">
+                  <span class="field-error" id="parentEmailError" aria-live="polite"></span>
+                </div>
+                <div class="field">
+                  <label for="parentPhone">Telefon <span>*</span></label>
+                  <input id="parentPhone" name="parentPhone" type="tel" inputmode="tel" autocomplete="tel" placeholder="+420 777 123 456" required aria-describedby="parentPhoneError">
+                  <span class="field-error" id="parentPhoneError" aria-live="polite"></span>
+                </div>
+              </div>
+              <div class="field">
+                <label for="relationship">Vztah k dítěti <span>*</span></label>
+                <select id="relationship" name="relationship" required aria-describedby="relationshipError">
+                  <option value="">Vyberte prosím</option>
+                  <option value="Maminka">Maminka</option>
+                  <option value="Tatínek">Tatínek</option>
+                  <option value="Jiný zákonný zástupce">Jiný zákonný zástupce</option>
+                </select>
+                <span class="field-error" id="relationshipError" aria-live="polite"></span>
+              </div>
+            </fieldset>
+
+            <fieldset class="wizard-step" data-step="3" hidden>
+              <legend class="sr-only">Nástup a docházka</legend>
+              <div class="field">
+                <label for="startMonth">Preferovaný nástup <span>*</span></label>
+                <select id="startMonth" name="startMonth" required aria-describedby="startMonthError">
+                  <option value="">Vyberte prosím</option>
+                  <option value="Září 2026">Září 2026</option>
+                  <option value="Říjen 2026">Říjen 2026</option>
+                  <option value="Leden 2027">Leden 2027</option>
+                  <option value="Kdykoli během roku">Kdykoli během roku</option>
+                </select>
+                <span class="field-error" id="startMonthError" aria-live="polite"></span>
+              </div>
+              <fieldset class="attendance-picker">
+                <legend>Jaká docházka vám vyhovuje? <span>*</span></legend>
+                <div class="attendance-options">
+                  <label class="attendance-option">
+                    <input type="radio" name="attendance" value="Celý den (7:00–18:00)" required>
+                    <span><strong>Celý den</strong><small>7:00–18:00</small></span>
+                  </label>
+                  <label class="attendance-option">
+                    <input type="radio" name="attendance" value="Dopoledne (7:00–13:00)">
+                    <span><strong>Dopoledne</strong><small>7:00–13:00</small></span>
+                  </label>
+                </div>
+                <span class="field-error" id="attendanceError" aria-live="polite"></span>
+              </fieldset>
+              <div class="field">
+                <label for="enrollNote">Co bychom měli vědět? <small>(nepovinné)</small></label>
+                <textarea id="enrollNote" name="enrollNote" rows="3" placeholder="Alergie, zvyky, sourozenci, cokoli je pro vás důležité."></textarea>
+              </div>
+            </fieldset>
+
+            <fieldset class="wizard-step" data-step="4" hidden>
+              <legend class="sr-only">Shrnutí přihlášky</legend>
+              <div class="summary">
+                <dl>
+                  <div><dt>Dítě</dt><dd data-summary="child"></dd></div>
+                  <div><dt>Datum narození</dt><dd data-summary="birth"></dd></div>
+                  <div><dt>Třída</dt><dd data-summary="class"></dd></div>
+                  <div><dt>Rodič</dt><dd data-summary="parent"></dd></div>
+                  <div><dt>Kontakt</dt><dd data-summary="contact"></dd></div>
+                  <div><dt>Nástup</dt><dd data-summary="start"></dd></div>
+                  <div><dt>Docházka</dt><dd data-summary="attendance"></dd></div>
+                  <div><dt>Poznámka</dt><dd data-summary="note"></dd></div>
+                </dl>
+              </div>
+              <label class="consent">
+                <input type="checkbox" name="consent" required aria-describedby="consentError">
+                <span>Souhlasím se zpracováním údajů pro účely přihlášky. <small>(V ukázce se nic neodesílá.)</small></span>
+              </label>
+              <span class="field-error" id="consentError" aria-live="polite"></span>
+            </fieldset>
+
+            <p class="form-status" data-form-status role="status" aria-live="polite"></p>
+
+            <div class="wizard-nav">
+              <button class="btn btn--ghost" type="button" data-step-back hidden><svg class="icon" aria-hidden="true"><use href="#i-arrow-left"/></svg> Zpět</button>
+              <button class="btn btn--primary" type="button" data-step-next>Pokračovat <svg class="icon" aria-hidden="true"><use href="#i-arrow"/></svg></button>
+              <button class="btn btn--primary" type="submit" data-step-submit hidden>Odeslat přihlášku <svg class="icon" aria-hidden="true"><use href="#i-check"/></svg></button>
+            </div>
+          </form>
+
+          <div class="enroll-success" data-enroll-success hidden>
+            <span class="success-icon"><svg class="icon" aria-hidden="true"><use href="#i-check"/></svg></span>
+            <p class="label"><span>Hotovo</span> Ukázková přihláška</p>
+            <h3>Máme to. Děkujeme!</h3>
+            <p>Přihláška <strong data-app-number>L-2026-000</strong> je uložená jen ve vašem prohlížeči. Ozvali bychom se do dvou pracovních dnů.</p>
+            <button class="btn btn--soft" type="button" data-enroll-reset>Přihlásit další dítě</button>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section faq tab-panel" id="faq" aria-labelledby="faq-title">
+      <div class="container faq-grid">
+        <div class="faq-copy reveal">
+          <p class="label"><span>06</span> Časté otázky</p>
+          <h2 id="faq-title">Na co se <em>rodiče ptají.</em></h2>
+          <p class="section-intro">Nenašli jste odpověď? Napište nám nebo se zastavte na prohlídce. Rádi si uděláme čas.</p>
+          <a class="text-link" href="#kontakt">Domluvit prohlídku <svg class="icon" aria-hidden="true"><use href="#i-arrow"/></svg></a>
+        </div>
+        <div class="faq-list reveal">
+          <details>
+            <summary>Jak probíhá adaptace? <svg class="icon" aria-hidden="true"><use href="#i-chevron"/></svg></summary>
+            <p>První dny chodí dítě na kratší dopoledne, postupně přidáváme oběd a odpolední spánek. Rodič je vždy nablízku a společně ladíme tempo. Adaptace není zkouška, je to proces.</p>
+          </details>
+          <details>
+            <summary>Co když dítě ještě nemá pleny? <svg class="icon" aria-hidden="true"><use href="#i-chevron"/></svg></summary>
+            <p>Bereme i děti, které se teprve učí na nočník. Domluvíme se na společném postupu a vše řešíme bez tlaku a bez srovnávání s ostatními.</p>
+          </details>
+          <details>
+            <summary>Máte bezlepkovou nebo bezlaktózovou stravu? <svg class="icon" aria-hidden="true"><use href="#i-chevron"/></svg></summary>
+            <p>Ano. Po domluvě připravíme jídlo podle potřeby dítěte. Alergeny máme označené u každého jídla a jídelníček konzultujeme s rodiči.</p>
+          </details>
+          <details>
+            <summary>Kolik stojí školkovné? <svg class="icon" aria-hidden="true"><use href="#i-chevron"/></svg></summary>
+            <p>Ukázkové školkovné je 9 800 Kč měsíčně při celodenní docházce a 7 200 Kč při dopolední. Stravné je 1 400 Kč měsíčně. V ceně jsou pomůcky, výlety i odpolední kluby.</p>
+          </details>
+          <details>
+            <summary>Jak řešíte nemocnost? <svg class="icon" aria-hidden="true"><use href="#i-chevron"/></svg></summary>
+            <p>Dítě s teplotou nebo infekcí prosím nechte doma. Máme nastavený systém omluv a vracení stravného. Zdraví všech dětí je pro nás priorita.</p>
+          </details>
+        </div>
+      </div>
+    </section>
+
+    <section class="section contact tab-panel" id="kontakt" role="tabpanel" aria-labelledby="contact-title">
+      <div class="container contact-grid">
+        <div class="contact-copy reveal">
+          <p class="label"><span>07</span> Kontakt</p>
+          <h2 id="contact-title">Přijďte si to k nám <em>vyzkoušet.</em></h2>
+          <p class="section-intro">Nejlepší je vidět školku naživo. Vyberte termín prohlídky nebo nám napište. Ukážeme vám třídy, zahradu i to, co zrovna vaříme.</p>
+          <ul class="contact-list">
+            <li><span class="contact-icon"><svg class="icon" aria-hidden="true"><use href="#i-pin"/></svg></span><div><strong>Kde nás najdete</strong><span>Na Kuthence 12, 160 00 Praha 6</span></div></li>
+            <li><span class="contact-icon"><svg class="icon" aria-hidden="true"><use href="#i-phone"/></svg></span><div><strong>Zavolejte</strong><a href="tel:+420777123456">+420 777 123 456</a></div></li>
+            <li><span class="contact-icon"><svg class="icon" aria-hidden="true"><use href="#i-mail"/></svg></span><div><strong>Napište</strong><a href="mailto:ahoj@skolkalentilka.cz">ahoj@skolkalentilka.cz</a></div></li>
+            <li><span class="contact-icon"><svg class="icon" aria-hidden="true"><use href="#i-clock"/></svg></span><div><strong>Otevřeno</strong><span>Po–Pá 7:00–18:00</span></div></li>
+          </ul>
+          <div class="map-card" aria-label="Ilustrační mapa okolí školky">
+            <svg viewBox="0 0 520 250" role="img" aria-labelledby="mapTitle mapDesc">
+              <title id="mapTitle">Ilustrační mapa</title>
+              <desc id="mapDesc">Zjednodušená mapa s ulicemi, parkem a pinem školky Lentilka.</desc>
+              <rect width="520" height="250" rx="20" fill="#EAF2E5"/>
+              <path d="M-20 80C90 50 170 120 270 90s170-30 280 0" fill="none" stroke="#FFFDF8" stroke-width="36"/>
+              <path d="M-20 80C90 50 170 120 270 90s170-30 280 0" fill="none" stroke="#B9C9D4" stroke-width="2" stroke-dasharray="8 8"/>
+              <path d="M100-20c20 70 0 130 40 190s70 80 60 100" fill="none" stroke="#FFFDF8" stroke-width="28"/>
+              <path d="M330-20c-10 80 35 150 20 210" fill="none" stroke="#FFFDF8" stroke-width="22"/>
+              <rect x="150" y="132" width="150" height="90" rx="18" fill="#BFE8C9"/>
+              <circle cx="190" cy="165" r="14" fill="#4ECB8D"/><circle cx="235" cy="185" r="18" fill="#4ECB8D"/><circle cx="275" cy="158" r="12" fill="#4ECB8D"/>
+              <path d="M390 145h54v42h-54z" fill="#FFE3A3" stroke="#17324D" stroke-width="2"/>
+              <path d="M385 145h64l-32-24-32 24Z" fill="#FF9BC2" stroke="#17324D" stroke-width="2"/>
+              <g transform="translate(260 116)">
+                <path d="M0 34S-26 16-26 0a26 26 0 1 1 52 0C26 16 0 34 0 34Z" fill="#FF5D5D" stroke="#17324D" stroke-width="3"/>
+                <circle cx="0" cy="0" r="9" fill="#FFFDF8" stroke="#17324D" stroke-width="3"/>
+              </g>
+              <text x="278" y="112" font-family="Nunito, sans-serif" font-size="13" font-weight="800" fill="#17324D">Lentilka</text>
+              <text x="30" y="60" font-family="Nunito, sans-serif" font-size="11" font-weight="700" fill="#6B7F8E">Na Kuthence</text>
+              <text x="375" y="220" font-family="Nunito, sans-serif" font-size="11" font-weight="700" fill="#6B7F8E">Dejvická</text>
+            </svg>
+          </div>
+        </div>
+
+        <div class="tour-card reveal">
+          <div class="tour-head">
+            <span class="tour-icon"><svg class="icon" aria-hidden="true"><use href="#i-calendar"/></svg></span>
+            <div><p class="label"><span>Prohlídka</span> Bez závazků</p><h3>Přijďte se podívat</h3></div>
+          </div>
+          <p class="tour-intro">Prohlídky děláme v úterý a ve čtvrtek dopoledne. Vyberte termín, který vám sedne.</p>
+
+          <form class="tour-form" data-tour-form novalidate>
+            <fieldset class="tour-picker">
+              <legend>Den <span>*</span></legend>
+              <div class="tour-options tour-options--dates">
+                <label class="tour-option"><input type="radio" name="tourDate" value="úterý 10. 11." required><span><small>Út</small><strong>10. 11.</strong></span></label>
+                <label class="tour-option"><input type="radio" name="tourDate" value="čtvrtek 12. 11."><span><small>Čt</small><strong>12. 11.</strong></span></label>
+                <label class="tour-option"><input type="radio" name="tourDate" value="úterý 17. 11."><span><small>Út</small><strong>17. 11.</strong></span></label>
+              </div>
+              <span class="field-error" id="tourDateError" aria-live="polite"></span>
+            </fieldset>
+            <fieldset class="tour-picker">
+              <legend>Čas <span>*</span></legend>
+              <div class="tour-options tour-options--times">
+                <label class="tour-option"><input type="radio" name="tourTime" value="9:00" required><span>9:00</span></label>
+                <label class="tour-option"><input type="radio" name="tourTime" value="10:00"><span>10:00</span></label>
+              </div>
+              <span class="field-error" id="tourTimeError" aria-live="polite"></span>
+            </fieldset>
+            <div class="field-row">
+              <div class="field">
+                <label for="tourName">Jméno <span>*</span></label>
+                <input id="tourName" name="tourName" type="text" autocomplete="name" required aria-describedby="tourNameError">
+                <span class="field-error" id="tourNameError" aria-live="polite"></span>
+              </div>
+              <div class="field">
+                <label for="tourEmail">E-mail <span>*</span></label>
+                <input id="tourEmail" name="tourEmail" type="email" autocomplete="email" required aria-describedby="tourEmailError">
+                <span class="field-error" id="tourEmailError" aria-live="polite"></span>
+              </div>
+            </div>
+            <button class="btn btn--primary tour-submit" type="submit">Rezervovat prohlídku <svg class="icon" aria-hidden="true"><use href="#i-arrow"/></svg></button>
+            <p class="demo-note demo-note--small"><svg class="icon" aria-hidden="true"><use href="#i-lock"/></svg> Ukázková rezervace, nic se neodesílá.</p>
+          </form>
+
+          <div class="tour-success" data-tour-success hidden>
+            <span class="success-icon"><svg class="icon" aria-hidden="true"><use href="#i-check"/></svg></span>
+            <h3>Těšíme se!</h3>
+            <p data-tour-summary>Prohlídka je rezervovaná.</p>
+            <button class="btn btn--soft" type="button" data-tour-reset>Rezervovat jiný termín</button>
+          </div>
+        </div>
+      </div>
+    </section>
+    </div>
+  </main>
+
+  <footer class="site-foot">
+    <div class="container foot-grid">
+      <div class="foot-brand">
+        <a class="brand" href="#top" aria-label="Lentilka, zpět na začátek">
+          <span class="brand-mark" aria-hidden="true">
+            <svg viewBox="0 0 64 64">
+              <circle cx="32" cy="32" r="28" fill="#FFD447" stroke="#17324D" stroke-width="4"/>
+              <path d="M32 46V25" fill="none" stroke="#17324D" stroke-width="3.5" stroke-linecap="round"/>
+              <path d="M32 30c-8-1-12-5-12-12 7 0 12 4 12 12Z" fill="#4ECB8D" stroke="#17324D" stroke-width="3.2" stroke-linejoin="round"/>
+              <path d="M32 34c7-1 11-5 11-11-6 0-11 3-11 11Z" fill="#3D7BFF" stroke="#17324D" stroke-width="3.2" stroke-linejoin="round"/>
+            </svg>
+          </span>
+          <span class="brand-name">Lentilka<small>školka &amp; jesle</small></span>
+        </a>
+        <p>Malá školka s velkým dvorem. Pro děti, které si chtějí hrát, a rodiče, kteří chtějí mít klid v duši.</p>
+      </div>
+      <nav class="foot-col" aria-label="Patička — školka">
+        <h3>Školka</h3>
+        <a href="#o-skolicce">O školce</a>
+        <a href="#tridy">Třídy</a>
+        <a href="#den">Náš den</a>
+        <a href="#jidelnicek">Jídelníček</a>
+      </nav>
+      <nav class="foot-col" aria-label="Patička — rodiče">
+        <h3>Pro rodiče</h3>
+        <a href="#zapis">Zápis 2026/27</a>
+        <a href="#faq-title">Časté otázky</a>
+        <a href="#kontakt">Kontakt</a>
+        <a href="mailto:ahoj@skolkalentilka.cz">Napsat e-mail</a>
+      </nav>
+      <div class="foot-col foot-contact">
+        <h3>Kontakt</h3>
+        <p>Na Kuthence 12<br>160 00 Praha 6</p>
+        <a href="tel:+420777123456">+420 777 123 456</a>
+        <a href="mailto:ahoj@skolkalentilka.cz">ahoj@skolkalentilka.cz</a>
+      </div>
+    </div>
+    <div class="container foot-bottom">
+      <p>© <span data-year>2026</span> Lentilka · Ukázkový web, všechny údaje jsou smyšlené.</p>
+      <p>Vytvořeno jako ukázka pro <strong>Pomelo studio</strong>.</p>
+    </div>
+  </footer>
+
+  <script src="js/app.js?v=20261108b" defer></script>
+</body>
+</html>
